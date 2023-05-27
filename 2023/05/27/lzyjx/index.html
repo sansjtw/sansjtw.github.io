@@ -3,7 +3,7 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8" />
-        <title>金条k的博客</title>
+        <title>解析蓝奏云接口源码 | 金条k的博客</title>
         <meta name="author" content="金条k" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -32,7 +32,9 @@
 
 
 
-<script src="/sansjtwblog/js/lib/home.js"></script>
+
+
+
 
 <link rel="stylesheet" href="/sansjtwblog/css/main.css" />
 
@@ -143,32 +145,11 @@
 
             <transition name="into">
                 <div id="main" v-show="!loading">
-                    <div id="home-head">
-    <div id="home-background" ref="homeBackground" data-images="/sansjtwblog/images/background.jpg"></div>
-    <div id="home-info" @click="homeClick">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>金条k的博客</h1>
-                <h3>金条k的官方博客 建造于2023.5.25</h3>
-                <h5></h5>
-            </div>
-        </span>
+                    <div class="article">
+    <div>
+        <h1>解析蓝奏云接口源码</h1>
     </div>
-</div>
-<div id="home-posts-wrap"  ref="homePostsWrap">
-    <div id="home-posts">
-        
-
-<div class="post">
-    <a href="/sansjtwblog/2023/05/27/lzyjx/">
-        <h2 class="post-title">解析蓝奏云接口源码</h2>
-    </a>
-    <div class="category-and-date">
-        
+    <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
@@ -177,131 +158,59 @@
         </span>
         
         
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>解析蓝奏云接口源码<br>…</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        <span class="tag">
-            
-            <a href="/sansjtwblog/tags/php/" style="color: #00bcd4">php</a>
-        </span>
-        
-    </div>
-    <a href="/sansjtwblog/2023/05/27/lzyjx/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/sansjtwblog/2023/05/26/wp1-6/">
-        <h2 class="post-title">金条云网盘1.6版更新</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
+        <span class="tags">
             <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
+                <i class="fa-solid fa-tags fa-fw"></i>
             </span>
-            2023/5/26
+            
+            <span class="tag">
+                
+                <a href="/sansjtwblog/tags/php/" style="color: #03a9f4">php</a>
+            </span>
+            
         </span>
         
-        
     </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>1.6更新内容</p>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/sansjtwblog/2023/05/26/wp1-6/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/sansjtwblog/2023/05/25/hello-world/">
-        <h2 class="post-title">Hello World</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/5/25
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>欢迎来到这里，这将是我的第一篇文章，以后会持续更新的，欢迎大家！！</p>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/sansjtwblog/2023/05/25/hello-world/" class="go-post">阅读全文</a>
-</div>
+    
+    <div class="content" v-pre>
+        <h1 id="解析蓝奏云接口源码"><a href="#解析蓝奏云接口源码" class="headerlink" title="解析蓝奏云接口源码"></a>解析蓝奏云接口源码</h1><h2 id="解析蓝奏云介绍"><a href="#解析蓝奏云介绍" class="headerlink" title="解析蓝奏云介绍:"></a>解析蓝奏云介绍:</h2><p>你知道什么叫解析蓝奏云吗？<br>当你上传文件至蓝奏云后，获取的链接给他人后，还需要再次在链接里点击下载，难道就不能直接点入链接后下载吗？或者我没有服务器，那该如何将文件形成直链接？</p>
+<p>这个接口就可以将蓝奏云文件下载页自动转化为文件直链</p>
+<p>直链可能有时间限制</p>
+<h2 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程:"></a>安装教程:</h2><p>直接将index.php上传至支持php服务器中</p>
+<h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明:"></a>使用说明:</h2><h4 id="api格式"><a href="#api格式" class="headerlink" title="api格式:"></a>api格式:</h4><pre><code class="api">https://你的域名/index.php?&amp;url=https://wwrc.lanzoub.com/xxxxx&amp;pwd=1234&amp;type=json
+</code></pre>
+<h4 id="上传格式"><a href="#上传格式" class="headerlink" title="上传格式:"></a>上传格式:</h4><pre><code class="api">url 蓝奏云文件链接(必填)
 
 
-        <div class="page-current">
-    <div class="prev">
-        
-    </div>
-    <div class="page-index">
-        
-        <span class="current">1</span>
-        
-    </div>
-    <div class="next">
-        
-    </div>
-</div>
+pwd 密码(有密码的链接必填)
+
+
+type 返回方式(选填)
+</code></pre>
+<h4 id="返回格式"><a href="#返回格式" class="headerlink" title="返回格式:"></a>返回格式:</h4><pre><code class="json">code 代码
+
+
+msg 返回结果
+
+
+name 文件名称
+
+
+filesize 文件大小
+
+
+downUrl 文件直链
+</code></pre>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码:"></a>源码:</h2><p><a target="_blank" rel="noopener" href="https://github.com/sansjtw/jxzy">github源码</a></p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/sansjtw/jxlzy">gitee源码</a></p>
 
     </div>
     
-    <div id="home-card">
-        <div id="card-div">
-    <div class="card-style">
-        <div class="avatar">
-            <img src="/sansjtwblog/images/avatar.jpg" alt="avatar" />
-        </div>
-        <div class="name">金条k</div>
-        <div class="description">
-            <p>Description<br>…</p>
-
-        </div>
-        
-        
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
-            </div>
-            
-        </div>
-        
-    </div>
-</div>
-
-    </div>
+    
+    
+    
+    
+    
     
 </div>
 
@@ -337,6 +246,12 @@
             
         </div>
         <script src="/sansjtwblog/js/main.js"></script>
+        
+        
+
+
+
+
         
     </body>
 </html>
