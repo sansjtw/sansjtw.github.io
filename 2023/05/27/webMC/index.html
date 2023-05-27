@@ -3,7 +3,7 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8" />
-        <title>Archives | 金条k的博客</title>
+        <title>webMC | 金条k的博客</title>
         <meta name="author" content="金条k" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -30,7 +30,9 @@
 
 
 
-<script src="/sansjtwblog/js/lib/search.js"></script>
+
+
+
 
 
 
@@ -143,94 +145,51 @@
 
             <transition name="into">
                 <div id="main" v-show="!loading">
-                    
-<div id="archives">
-    
-    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
-    
-    <div id="timeline-wrap" ref="timeline">
+                    <div class="article">
+    <div>
+        <h1>webMC</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/5/27
+        </span>
         
-        <div class="timeline" data-title="helloworld">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/5/25</div>
-                <a href="/sansjtwblog/2023/05/25/hello-world/">
-                    <h3>Hello World</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
         
-        <div class="timeline" data-title="金条云网盘1.6版更新">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/5/26</div>
-                <a href="/sansjtwblog/2023/05/26/wp1-6/">
-                    <h3>金条云网盘1.6版更新</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="解析蓝奏云接口源码">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/5/27</div>
-                <a href="/sansjtwblog/2023/05/27/lzyjx/">
-                    <h3>解析蓝奏云接口源码</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/sansjtwblog/tags/php/" style="color: #00bcd4">php</a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="webmc">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/5/27</div>
-                <a href="/sansjtwblog/2023/05/27/webMC/">
-                    <h3>webMC</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/sansjtwblog/tags/javascript/" style="color: #00a596">javascript</a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/sansjtwblog/tags/javascript/" style="color: #ffa2c4">javascript</a>
+            </span>
+            
+        </span>
         
     </div>
+    
+    <div class="content" v-pre>
+        <h1 id="WebMC"><a href="#WebMC" class="headerlink" title="WebMC"></a>WebMC</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍:"></a>介绍:</h2><p>这是一个使用JavaScript编写的基于WebGL的网页版minecraft。<br>注:只是仿真，并不是官方版<br>jerrychan7大佬制作<br>我提供翻译</p>
+<h2 id="直接玩WebMC"><a href="#直接玩WebMC" class="headerlink" title="直接玩WebMC:"></a>直接玩WebMC:</h2><p><a target="_blank" rel="noopener" href="https://jerrychan7.github.io/WebMC">英文原版</a><br><a target="_blank" rel="noopener" href="https://sansjtw.github.io/WebMC">中文翻译版</a></p>
+<h2 id="WebMC源码"><a href="#WebMC源码" class="headerlink" title="WebMC源码:"></a>WebMC源码:</h2><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法:"></a>使用方法:</h3><p>需要运行在服务器上，因为有纹理图片的跨域问题。<br>若是有<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js</a>环境，那么可以在WebMC文件中执行</p>
+<pre><code class="shell">node server.js
+</code></pre>
+<p>指令来运行一个简单的服务器，然后通过<a target="_blank" rel="noopener" href="http://localhost:3000/%E8%BF%9B%E8%A1%8C%E8%AE%BF%E9%97%AE%E3%80%82">http://localhost:3000/进行访问。</a><br>若是你正在使用的IDE有自带的静态服务器功能，那可以通过IDE在浏览器中打开&#x2F;index.html文件。<br>还需要注意的是，你的浏览器必须开启和支持JavaScript扩展，并且因为跨域和中文版加入了中文字体，所以第一次打开可能需要一点时间</p>
+<h3 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载:"></a>源码下载:</h3><p><a target="_blank" rel="noopener" href="https://github.com/jerrychan7/WebMC">英文原版源码github</a><br><a target="_blank" rel="noopener" href="https://github.com/sansjtw/WebMC">中文翻译版源码github</a><br><a target="_blank" rel="noopener" href="https://gitee.com/sansjtw/WebMC">中文翻译版源码gitee</a></p>
+<p><img src="https://sansjtw.github.io/sansjtwblog/images/WebMC1.png" alt="WebMC"></p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
 </div>
 
                     <footer id="footer">
@@ -265,6 +224,12 @@
             
         </div>
         <script src="/sansjtwblog/js/main.js"></script>
+        
+        
+
+
+
+
         
     </body>
 </html>
