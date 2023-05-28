@@ -78,9 +78,11 @@
 </script>
 
 
+
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/sansjtwblog/js/anime.min.js"></script> 
 <script type="text/javascript" src="/sansjtwblog/js/fireworks.js"></script>
+
 
 
 <!DOCTYPE html>
@@ -229,7 +231,12 @@
 
             <transition name="into">
                 <div id="main" v-show="!loading">
-                    <div class="article">
+                    <!-- 雪花特效3 -->
+
+  <script type="text/javascript" src="/sansjtwblog/js/snow3.js"></script>
+
+
+<div class="article">
     <div>
         <h1>Hello World</h1>
     </div>
@@ -295,6 +302,5 @@
 
 
         
-        include '_custom/custom.ejs'
     </body>
 </html>
