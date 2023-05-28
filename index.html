@@ -162,15 +162,15 @@
 <div id="home-posts-wrap"  ref="homePostsWrap">
     <div id="home-posts">
         
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<link rel="stylesheet" href="/sansjtw/dist/APlayer.min.css">
 <div id="aplayer"></div>
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="/sansjtw/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
 <script>
   const ap = new APlayer({
     container: document.getElementById('aplayer'),
     autoplay: false, //自动播放
-    listFolded: true, //播放列表默认折叠
+    listFolded: false, //播放列表默认折叠
     listMaxHeight: 90, //播放列表最大高度
     order: 'list', //音频循环顺序, 可选值: 'list', 'random'
     loop: 'all', //音频循环播放, 可选值: 'all', 'one', 'none'
@@ -183,32 +183,18 @@
     audio: [{
         name: '把回忆拼好给你',
         artist: '芬芬,Zyboy忠宇',
-        lrc: 'https://sansjtw.github.io/sansjtwblog/images/music/把回忆拼好给你.lrc',
+        lrc: '/sansjtwblog/images/music/把回忆拼好给你.lrc',
         cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003pohtr1X4mEG.jpg',
         url: 'http://ws.stream.qqmusic.qq.com/C4000042Lu3v0Sk2B8.m4a?guid=833049343&vkey=39F65A88FBC9E9CDF653401F610B6B75F264F9C05182D67BE1E89BE2A37C7CBFCBF9113B43CCCFC86D37B56A4424C2A517E151FBECA626B4&uin=&fromtag=120032'
       },
       {
         name: '心做',
         artist: '沈城吴少',
-        lrc: 'https://sansjtw.github.io/sansjtwblog/images/music/心做.lrc',
+        lrc: '/sansjtwblog/images/music/心做.lrc',
         cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000027KcQq3vJwV2.jpg',
         url: 'http://ws.stream.qqmusic.qq.com/C400000fjInN46GHjJ.m4a?guid=668092535&vkey=E1FFDF63DDC8F142A5F85B87CB2EC354322E63ABE586506C53C7D5E90A4AC759399BF98AADBF4A888DB1BFDC7918D229BD4F2BA441DC44D8&uin=&fromtag=120032'
       }
     ]
-  });
-
-  //实现切换音频时，根据音频的封面图片自适应主题色
-  const colorThief = new ColorThief();
-  const setTheme = (index) => {
-    if (!ap.list.audios[index].theme) {
-      colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
-        ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
-      });
-    }
-  };
-  setTheme(ap.list.index);
-  ap.on('listswitch', (data) => {
-    setTheme(data.index);
   });
 </script>
 
@@ -247,7 +233,7 @@
         
         <span class="tag">
             
-            <a href="/sansjtwblog/tags/javascript/" style="color: #ff7d73">javascript</a>
+            <a href="/sansjtwblog/tags/javascript/" style="color: #00a596">javascript</a>
         </span>
         
     </div>
@@ -286,7 +272,7 @@
         
         <span class="tag">
             
-            <a href="/sansjtwblog/tags/php/" style="color: #00bcd4">php</a>
+            <a href="/sansjtwblog/tags/php/" style="color: #00a596">php</a>
         </span>
         
     </div>
