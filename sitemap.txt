@@ -1,3 +1,4 @@
+https://sansjtw.github.io/sansjtwblog/2023/06/04/termux%E4%BD%BF%E7%94%A8%E7%B1%B3%E6%B8%B8%E7%A4%BE%E8%BE%85%E5%8A%A9%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC/
 https://sansjtw.github.io/sansjtwblog/2023/06/04/termux%E6%8D%A2%E6%BA%90/
 https://sansjtw.github.io/sansjtwblog/2023/05/27/webMC/
 https://sansjtw.github.io/sansjtwblog/2023/05/25/hello-world/
@@ -5,4 +6,6 @@ https://sansjtw.github.io/sansjtwblog/2023/05/27/lzyjx/
 https://sansjtw.github.io/sansjtwblog/2023/05/26/wp1-6/
 https://sansjtw.github.io/sansjtwblog
 https://sansjtw.github.io/sansjtwblog/tags/php/
+https://sansjtw.github.io/sansjtwblog/tags/python/
+https://sansjtw.github.io/sansjtwblog/tags/termux/
 https://sansjtw.github.io/sansjtwblog/tags/javascript/

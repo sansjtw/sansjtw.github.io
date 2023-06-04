@@ -133,7 +133,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>webMC | 金条k的博客</title>
+        <title>Tags: termux | 金条k的博客</title>
         <meta name="author" content="金条k" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -157,10 +157,6 @@
 
 
 <script src="/sansjtwblog/js/lib/preview.js"></script>
-
-
-
-
 
 
 
@@ -275,55 +271,83 @@
 
             <transition name="into">
                 <div id="main" v-show="!loading">
-                    <!-- 雪花特效3 -->
-
-  <script type="text/javascript" src="/sansjtwblog/js/snow3.js"></script>
-
-
-<div class="article">
-    <div>
-        <h1>webMC</h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/5/27
+                    <div id="archives">
+    
+    <div class="categories-tags">
+        
+        
+        <span>
+            <a href="/sansjtwblog/tags/php/" style="background: #00bcd4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                php
+            </a>
         </span>
         
         
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            <span class="tag">
+        
+        <span>
+            <a href="/sansjtwblog/tags/python/" style="background: #00a596">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                python
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/sansjtwblog/tags/termux/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                termux
+            </a>
+        </span>
+        
+        
+        
+        
+        
+        <span>
+            <a href="/sansjtwblog/tags/javascript/" style="background: #00bcd4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                javascript
+            </a>
+        </span>
+        
+        
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2023/6/4</div>
+            <a href="/sansjtwblog/2023/06/04/termux%E6%8D%A2%E6%BA%90/">
+                <h3>termux换源</h3>
+            </a>
+            <div class="info">
                 
-                <a href="/sansjtwblog/tags/javascript/" style="color: #00bcd4">javascript</a>
-            </span>
-            
-        </span>
-        
+                
+                <span class="tags">
+                    <span class="icon">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/sansjtwblog/tags/termux/" style="color: #00bcd4">termux</a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
     </div>
-    
-    <div class="content" v-pre>
-        <h1 id="WebMC"><a href="#WebMC" class="headerlink" title="WebMC"></a>WebMC</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍:"></a>介绍:</h2><p>这是一个使用JavaScript编写的基于WebGL的网页版minecraft。<br>注:只是仿真，并不是官方版<br>jerrychan7大佬制作<br>我提供翻译</p>
-<h2 id="直接玩WebMC"><a href="#直接玩WebMC" class="headerlink" title="直接玩WebMC:"></a>直接玩WebMC:</h2><p><a target="_blank" rel="noopener" href="https://jerrychan7.github.io/WebMC">英文原版</a><br><a href="https://sansjtw.github.io/WebMC">中文翻译版</a></p>
-<h2 id="WebMC源码"><a href="#WebMC源码" class="headerlink" title="WebMC源码:"></a>WebMC源码:</h2><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法:"></a>使用方法:</h3><p>需要运行在服务器上，因为有纹理图片的跨域问题。<br>若是有<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js</a>环境，那么可以在WebMC文件中执行</p>
-<pre><code class="shell">node server.js
-</code></pre>
-<p>指令来运行一个简单的服务器，然后通过<a target="_blank" rel="noopener" href="http://localhost:3000/%E8%BF%9B%E8%A1%8C%E8%AE%BF%E9%97%AE%E3%80%82">http://localhost:3000/进行访问。</a><br>若是你正在使用的IDE有自带的静态服务器功能，那可以通过IDE在浏览器中打开&#x2F;index.html文件。<br>还需要注意的是，你的浏览器必须开启和支持JavaScript扩展，并且因为跨域和中文版加入了中文字体，所以第一次打开可能需要一点时间</p>
-<h3 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载:"></a>源码下载:</h3><p><a target="_blank" rel="noopener" href="https://github.com/jerrychan7/WebMC">英文原版源码github</a><br><a target="_blank" rel="noopener" href="https://github.com/sansjtw/WebMC">中文翻译版源码github</a><br><a target="_blank" rel="noopener" href="https://gitee.com/sansjtw/WebMC">中文翻译版源码gitee</a></p>
-<p><img src="https://sansjtw.github.io/sansjtwblog/images/WebMC1.png" alt="WebMC"></p>
-
-    </div>
-    
-    
-    
-    
-    
-    
     
 </div>
 
@@ -359,12 +383,6 @@
             
         </div>
         <script src="/sansjtwblog/js/main.js"></script>
-        
-        
-
-
-
-
         
         
     <script src="/sansjtwblog/live2d/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"jsonPath":"/sansjtwblog/live2d/assets/assets/haruto.model.json"},"display":{"position":"right","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>

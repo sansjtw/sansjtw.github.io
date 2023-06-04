@@ -133,7 +133,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>webMC | 金条k的博客</title>
+        <title>米游社辅助自动签到脚本 | 金条k的博客</title>
         <meta name="author" content="金条k" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -282,14 +282,14 @@
 
 <div class="article">
     <div>
-        <h1>webMC</h1>
+        <h1>米游社辅助自动签到脚本</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/5/27
+            2023/6/4
         </span>
         
         
@@ -300,7 +300,7 @@
             
             <span class="tag">
                 
-                <a href="/sansjtwblog/tags/javascript/" style="color: #00bcd4">javascript</a>
+                <a href="/sansjtwblog/tags/python/" style="color: #ff7d73">python</a>
             </span>
             
         </span>
@@ -308,14 +308,95 @@
     </div>
     
     <div class="content" v-pre>
-        <h1 id="WebMC"><a href="#WebMC" class="headerlink" title="WebMC"></a>WebMC</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍:"></a>介绍:</h2><p>这是一个使用JavaScript编写的基于WebGL的网页版minecraft。<br>注:只是仿真，并不是官方版<br>jerrychan7大佬制作<br>我提供翻译</p>
-<h2 id="直接玩WebMC"><a href="#直接玩WebMC" class="headerlink" title="直接玩WebMC:"></a>直接玩WebMC:</h2><p><a target="_blank" rel="noopener" href="https://jerrychan7.github.io/WebMC">英文原版</a><br><a href="https://sansjtw.github.io/WebMC">中文翻译版</a></p>
-<h2 id="WebMC源码"><a href="#WebMC源码" class="headerlink" title="WebMC源码:"></a>WebMC源码:</h2><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法:"></a>使用方法:</h3><p>需要运行在服务器上，因为有纹理图片的跨域问题。<br>若是有<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js</a>环境，那么可以在WebMC文件中执行</p>
-<pre><code class="shell">node server.js
+        <h1 id="AutoMihoyoBBS介绍"><a href="#AutoMihoyoBBS介绍" class="headerlink" title="AutoMihoyoBBS介绍"></a><a target="_blank" rel="noopener" href="https://github.com/Womsxd/AutoMihoyoBBS">AutoMihoyoBBS</a>介绍</h1><p>AutoMihoyoBBS是一个由Womsxd写的一个基于Python3的米游社辅助签到项目<br>但是Womsxd原作者的<a target="_blank" rel="noopener" href="https://github.com/Womsxd/AutoMihoyoBBS">AutoMihoyoBBS</a>仓库被封掉了</p>
+<h1 id="AutoMihoyoBBS用途"><a href="#AutoMihoyoBBS用途" class="headerlink" title="AutoMihoyoBBS用途"></a>AutoMihoyoBBS用途</h1><p>这是一个米游社的辅助签到项目，包含了米游币、崩坏2、崩坏3、原神、未定事件簿 已经支持米哈游国内正在运营的全部游戏的米游社签到(2022-7-19)</p>
+<h1 id="AutoMihoyoBBS功能"><a href="#AutoMihoyoBBS功能" class="headerlink" title="AutoMihoyoBBS功能"></a>AutoMihoyoBBS功能</h1><p>1.自动获取任务列表<br>2.自动看帖<br>3.自动点赞<br>4.自动分享<br>5.自动签到<br>6.自动获取帖子列表<br>7.自动获取米游币</p>
+<h1 id="使用AutoMihoyoBBS"><a href="#使用AutoMihoyoBBS" class="headerlink" title="使用AutoMihoyoBBS"></a>使用AutoMihoyoBBS</h1><h2 id="AutoMihoyoBBS源码的下载与安装"><a href="#AutoMihoyoBBS源码的下载与安装" class="headerlink" title="AutoMihoyoBBS源码的下载与安装"></a>AutoMihoyoBBS源码的下载与安装</h2><p>只因原作者的<a target="_blank" rel="noopener" href="https://github.com/Womsxd/AutoMihoyoBBS">AutoMihoyoBBS</a>仓库被封掉了<br>所以原版的<a target="_blank" rel="noopener" href="https://github.com/Womsxd/AutoMihoyoBBS/archive/refs/heads/master.zip%E4%B8%8B%E8%BD%BD%E6%96%B9%E5%BC%8F%E6%98%AF%E4%B8%8D%E8%A1%8C%E4%BA%86">https://github.com/Womsxd/AutoMihoyoBBS/archive/refs/heads/master.zip下载方式是不行了</a><br>所以只能换一种方法，你可以直接在本博客保存的AutoMihoyoBBS文件下载:<a href="https://sansjtw.github.io/sansjtwblog/images/AutoMihoyoBBS/AutoMihoyoBBS.zip">https://sansjtw.github.io/sansjtwblog/images/AutoMihoyoBBS/AutoMihoyoBBS.zip</a><br>在liunx中可以使用命令</p>
+<pre><code class="shell">wget https://sansjtw.github.io/sansjtwblog/images/AutoMihoyoBBS/AutoMihoyoBBS.zip
+unzip AutoMihoyoBBS.zip
+rm -r AutoMihoyoBBS.zip
 </code></pre>
-<p>指令来运行一个简单的服务器，然后通过<a target="_blank" rel="noopener" href="http://localhost:3000/%E8%BF%9B%E8%A1%8C%E8%AE%BF%E9%97%AE%E3%80%82">http://localhost:3000/进行访问。</a><br>若是你正在使用的IDE有自带的静态服务器功能，那可以通过IDE在浏览器中打开&#x2F;index.html文件。<br>还需要注意的是，你的浏览器必须开启和支持JavaScript扩展，并且因为跨域和中文版加入了中文字体，所以第一次打开可能需要一点时间</p>
-<h3 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载:"></a>源码下载:</h3><p><a target="_blank" rel="noopener" href="https://github.com/jerrychan7/WebMC">英文原版源码github</a><br><a target="_blank" rel="noopener" href="https://github.com/sansjtw/WebMC">中文翻译版源码github</a><br><a target="_blank" rel="noopener" href="https://gitee.com/sansjtw/WebMC">中文翻译版源码gitee</a></p>
-<p><img src="https://sansjtw.github.io/sansjtwblog/images/WebMC1.png" alt="WebMC"></p>
+<p>来安装与解压AutoMihoyoBBS，但请确保你已经安装了unzip与wget软件包<br>没有可以安装</p>
+<pre><code class="shell">pkg update unzip &amp;&amp; pkg install wget
+</code></pre>
+<p>termux用户记得换源:<a href="https://sansjtw.github.io/sansjtwblog/2023/06/04/termux%E6%8D%A2%E6%BA%90/">termux换源方法</a></p>
+<p>当然，这里还有一种安装AutoMihoyoBBS的方法，可以将其他用户复制转发的AutoMihoyoBBS仓库，比如<a target="_blank" rel="noopener" href="https://gitee.com/lie5860/AutoMihoyoBBS">lie5860转发的AutoMihoyoBBS</a><br>在liunx直接克隆git</p>
+<pre><code class="shell">git clone https://gitee.com/lie5860/AutoMihoyoBBS
+</code></pre>
+<p>没有git软件包可以安装</p>
+<pre><code class="shell">pkg install git
+</code></pre>
+<h2 id="AutoMihoyoBBS的部署"><a href="#AutoMihoyoBBS的部署" class="headerlink" title="AutoMihoyoBBS的部署"></a>AutoMihoyoBBS的部署</h2><p>进入AutoMihoyoBBS的目录<br>没有<a target="_blank" rel="noopener" href="https://www.python.org/downloads/">python3</a>的可以执行</p>
+<pre><code class="shell">pkg install python3
+</code></pre>
+<p>然后执行</p>
+<pre><code class="shell">pip install -r requirements.txt
+</code></pre>
+<p>用于下载依赖</p>
+<p>接下来这是作者加入的比较复杂的环节:<br>打开目录中的config文件夹复制config.json.example并改名为config.json，脚本的多用户功能靠读取不同的配置文件实现，你可以创建无数个自定义名字.json，脚本会扫描config目录下json为拓展名的文件，并按照名称顺序依次执行。<br>一般可以使用命令</p>
+<pre><code class="shell">cp -r config.json.example config.json
+rm -r config.json.example
+</code></pre>
+<p>用来改名为config.json</p>
+<h2 id="AutoMihoyoBBS的config-json配置与使用"><a href="#AutoMihoyoBBS的config-json配置与使用" class="headerlink" title="AutoMihoyoBBS的config.json配置与使用"></a>AutoMihoyoBBS的config.json配置与使用</h2><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在完成上一步的环节之后，使用文本编辑器打开config.json进行配置<br>配置前你需要获取你的米游社cookie，获取完成后，将复制的Cookie粘贴到config.json的”cookie”:” “中(在account里面)<br>列如</p>
+<pre><code class="json">&quot;cookie&quot;: &quot;你复制的cookie&quot;
+</code></pre>
+<p>随后再检查config.json的”enable”:的值为true</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在命令提示符(cmd)&#x2F;powershell，输入</p>
+<pre><code class="shell">python main.py
+</code></pre>
+<p>来进行执行</p>
+<p>多用户的请使用</p>
+<pre><code class="shell">python main_multi.py
+</code></pre>
+<p>多用户在需要自动执行的情况下请使用</p>
+<pre><code class="shell">python main_multi.py autorun
+</code></pre>
+<p><img src="https://sansjtw.github.io/sansjtwblog/images/AutoMihoyoBBS/1.png" alt="1"></p>
+<h2 id="获取米游社cookie"><a href="#获取米游社cookie" class="headerlink" title="获取米游社cookie"></a>获取米游社cookie</h2><h3 id="PC端"><a href="#PC端" class="headerlink" title="PC端"></a>PC端</h3><p>开你的浏览器,进入无痕&#x2F;隐身模式(用于获取长时间有效cookie)</p>
+<p>由于米哈游修改了bbs可以获取的Cookie，导致一次获取的Cookie缺失，所以需要增加步骤</p>
+<p>打开<a target="_blank" rel="noopener" href="http://bbs.mihoyo.com/ys/%E5%B9%B6%E8%BF%9B%E8%A1%8C%E7%99%BB%E5%85%A5%E6%93%8D%E4%BD%9C">http://bbs.mihoyo.com/ys/并进行登入操作</a></p>
+<p>在上一步登入完成后新建标签页，打开<a target="_blank" rel="noopener" href="http://user.mihoyo.com/%E5%B9%B6%E8%BF%9B%E8%A1%8C%E7%99%BB%E5%85%A5%E6%93%8D%E4%BD%9C">http://user.mihoyo.com/并进行登入操作</a> (如果你不需要自动获取米游币可以忽略这个步骤，并把mihoyobbs的enable改为false即可)</p>
+<p>按下键盘上的F12或右键检查,打开开发者工具,点击Console</p>
+<p>输入</p>
+<pre><code>var cookie=document.cookie;var ask=confirm(&#39;Cookie:&#39;+cookie+&#39;\n\nDo you want to copy the cookie to the clipboard?&#39;);if(ask==true)&#123;copy(cookie);msg=cookie&#125;else&#123;msg=&#39;Cancel&#39;&#125;
+</code></pre>
+<p>回车执行，并在确认无误后点击确定。</p>
+<p>此时Cookie已经复制到你的粘贴板上了</p>
+<h3 id="PE端"><a href="#PE端" class="headerlink" title="PE端"></a>PE端</h3><p>下载安装Via浏览器，应用商店搜索也有</p>
+<p>打开via浏览器，打开网页版米游社 <a target="_blank" rel="noopener" href="https://bbs.mihoyo.com/ys/">https://bbs.mihoyo.com/ys/</a> 或者 <a target="_blank" rel="noopener" href="http://user.mihoyo.com/">http://user.mihoyo.com/</a></p>
+<p>然后登录米游社，登录米游社</p>
+<p>长按全选复制下面代码，点击浏览器最上面的地址栏，</p>
+<p>删掉网址，粘贴代码</p>
+<pre><code>javascript:(()=&gt;&#123;prompt(&#39;&#39;,document.cookie)&#125;)();
+</code></pre>
+<p>点击右边箭头确认</p>
+<p>然后就会弹出弹窗，长按红框里面内容，全选复制所有内容</p>
+<h2 id="附-方便运行AutoMihoyoBBS程序"><a href="#附-方便运行AutoMihoyoBBS程序" class="headerlink" title="附 方便运行AutoMihoyoBBS程序"></a>附 方便运行AutoMihoyoBBS程序</h2><p>安装完成后，你可以使用以下的shell程序来更方便的运行AutoMihoyoBBS，前提需要安装包:</p>
+<pre><code class="shell">pkg install whiptail
+</code></pre>
+<p>程序源码如下，你可以将它放在一个sh格式的文件里:</p>
+<pre><code class="shell">#!/bin/bash
+# using dialog to create a menu
+
+wauo=$(whiptail --title &quot;米游社-自动&quot; --menu &quot;自动米游社签到&quot; 0 50 50 \
+&quot;1&quot; &quot;开始执行&quot; \
+&quot;2&quot; &quot;输入cookie信息&quot; \
+&quot;0&quot; &quot;退出&quot; \
+3&gt;&amp;1 1&gt;&amp;2 2&gt;&amp;3)
+case $&#123;wauo&#125; in
+1)cd &amp;&amp; cd AutoMihoyoBBS &amp;&amp;python3 main.py;;
+2)cd &amp;&amp; nano AutoMihoyoBBS/config/config.json;;
+0) ;;
+esac
+</code></pre>
+<p>如果你想运行他，可以使用</p>
+<pre><code class="shell">bash &lt;文件名&gt;.sh 
+</code></pre>
+<p>或者</p>
+<pre><code class="shell">./&lt;文件名&gt;.sh
+</code></pre>
+<h2 id="留言"><a href="#留言" class="headerlink" title="留言"></a>留言</h2><p>终于又完成了一篇 太不容易了</p>
 
     </div>
     
