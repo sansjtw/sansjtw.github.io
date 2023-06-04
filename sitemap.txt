@@ -1,5 +1,6 @@
-https://sansjtw.github.io/sansjtwblog/2023/05/25/hello-world/
+https://sansjtw.github.io/sansjtwblog/2023/06/04/termux%E6%8D%A2%E6%BA%90/
 https://sansjtw.github.io/sansjtwblog/2023/05/27/webMC/
+https://sansjtw.github.io/sansjtwblog/2023/05/25/hello-world/
 https://sansjtw.github.io/sansjtwblog/2023/05/27/lzyjx/
 https://sansjtw.github.io/sansjtwblog/2023/05/26/wp1-6/
 https://sansjtw.github.io/sansjtwblog
