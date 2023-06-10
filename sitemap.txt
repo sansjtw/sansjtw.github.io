@@ -7,5 +7,5 @@ https://sansjtw.github.io/sansjtwblog/2023/05/26/wp1-6/
 https://sansjtw.github.io/sansjtwblog
 https://sansjtw.github.io/sansjtwblog/tags/php/
 https://sansjtw.github.io/sansjtwblog/tags/python/
-https://sansjtw.github.io/sansjtwblog/tags/javascript/
 https://sansjtw.github.io/sansjtwblog/tags/termux/
+https://sansjtw.github.io/sansjtwblog/tags/javascript/
