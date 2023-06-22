@@ -58,7 +58,7 @@
 
   <url>
     <loc>https://sansjtw.github.io/sansjtwblog</loc>
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -66,28 +66,28 @@
   
   <url>
     <loc>https://sansjtw.github.io/sansjtwblog/tags/php/</loc>
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://sansjtw.github.io/sansjtwblog/tags/python/</loc>
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://sansjtw.github.io/sansjtwblog/tags/termux/</loc>
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://sansjtw.github.io/sansjtwblog/tags/javascript/</loc>
-    <lastmod>2023-06-10</lastmod>
+    <lastmod>2023-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
