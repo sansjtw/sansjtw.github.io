@@ -1,0 +1,508 @@
+
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script src="/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+<script>
+  const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    autoplay: false, //自动播放
+    listFolded: false, //播放列表默认折叠
+    listMaxHeight: 130, //播放列表最大高度
+    order: 'list', //音频循环顺序, 可选值: 'list', 'random'
+    loop: 'all', //音频循环播放, 可选值: 'all', 'one', 'none'
+    theme: '#e9e9e9', //切换音频时的主题色，优先级低于audio.theme
+    preload: 'none', //音频预加载，可选值: 'none', 'metadata', 'auto'
+    mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+    lrcType: 3, //歌词格式，可选值：3（LRC文件歌词格式），1（JS字符串歌词格式）
+    volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+    fixed: true, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
+    mini: true,
+    audio: [{
+        name: '把回忆拼好给你',
+        artist: '芬芬,Zyboy忠宇',
+        lrc: '/images/music/把回忆拼好给你.lrc',
+        cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003pohtr1X4mEG.jpg',
+        url: '/images/music/把回忆拼好给你.m4a'
+      },
+      {
+        name: '心做',
+        artist: '沈城吴少',
+        lrc: '/images/music/心做.lrc',
+        cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M0000027KcQq3vJwV2.jpg',
+        url: '/images/music/心做.m4a'
+      },
+      {
+        name: '梦中总是遥不可及',
+        artist: '渝子',
+        lrc: '/images/music/梦中总是遥不可及.lrc',
+        cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000FIfw348mIsi.jpg',
+        url: '/images/music/梦中总是遥不可及.m4a'
+      },
+      {
+        name: '求佛 (新版)',
+        artist: '就是南方凯',
+        lrc: '/images/music/求佛.lrc',
+        cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000ul29U0frZ26.jpg',
+        url: '/images/music/求佛.m4a'
+      },
+      {
+        name: '海阔天空',
+        artist: 'Beyond',
+        lrc: '/images/music/海阔天空.lrc',
+        cover: 'http://p4.music.126.net/q6cm6Pk70YArijk1_QDoEg==/109951163984013003.jpg?param=300x300',
+        url: 'http://music.163.com/song/media/outer/url?id=1357375695.mp3'
+      },
+      {
+        name: 'That Girl（DJCHEN Remix）',
+        artist: 'DJCHEN',
+        lrc: '/images/music/ThatGirl.lrc',
+        cover: 'http://p3.music.126.net/haAFEQ_qDVVkDcuDIwvsZA==/109951163368523248.jpg?param=300x300',
+        url: 'http://music.163.com/song/media/outer/url?id=574810340.mp3'
+      },
+      {
+        name: '让风告诉你',
+        artist: '花玲,喵☆酱,宴宁,kinsen',
+        lrc: '/images/music/让风告诉你.lrc',
+        cover: 'http://p4.music.126.net/pYKBjkB6FoNh5Yxkb9uCbw==/109951165698369632.jpg?param=300x300',
+        url: 'http://music.163.com/song/media/outer/url?id=1818031620.mp3'
+      },
+      {
+        name: '我知道你不爱我 (DJAx祥版)',
+        artist: '威仔,格子兮',
+        lrc: '/images/music/我知道你不爱我.lrc',
+        cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003rP5ur0qMtLr.jpg',
+        url: '/images/music/我知道你不爱我.m4a'
+      },
+      {
+        name: '流空-温州(MogriS Remix)-Extended Mix',
+        artist: 'MogriS',
+        lrc: '/images/music/流空-温州.lrc',
+        cover: 'https://music.liuzhijin.cn/static/img/nopic.jpg',
+        url: '/images/music/流空-温州.m4a'
+      },
+      {
+        name: '大雨还在下 (-dj|烟嗓版)',
+        artist: '西柚to',
+        lrc: '/images/music/大雨还在下.lrc',
+        cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002PBO374cr3xQ.jpg',
+        url: '/images/music/大雨还在下.m4a'
+      },
+      {
+        name: '金三角 - 尹大美提拱',
+        artist: 'DJ阿智',
+        lrc: '/images/music/金三角.lrc',
+        cover: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003OYLJS2S0qbr.jpg',
+        url: '/images/music/金三角.m4a'
+      },
+      {
+        name: '心做し',
+        artist: '双笙（陈元汐）',
+        lrc: '/images/music/心做し.lrc',
+        cover: 'http://p3.music.126.net/4m79yXLdqFt_0mbx9DjsoA==/109951166279817646.jpg?param=300x300',
+        url: 'http://music.163.com/song/media/outer/url?id=478303470.mp3'
+      },
+      {
+       name: '你从未离去',
+       artist: '白挺',
+       lrc: '/images/music/你从未离去.lrc',
+       cover: 'http://p1.music.126.net/ZZ1gmaHDMPn0AZ4mZhjN5Q==/2909307767352498.jpg?param=300x300',
+       url: 'http://music.163.com/song/media/outer/url?id=31365604.mp3'
+      }
+    ]
+  });
+
+  //实现切换音频时，根据音频的封面图片自适应主题色
+  const colorThief = new ColorThief();
+  const setTheme = (index) => {
+    if (!ap.list.audios[index].theme) {
+      colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+        ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+      });
+    }
+  };
+  setTheme(ap.list.index);
+  ap.on('listswitch', (data) => {
+    setTheme(data.index);
+  });
+</script>
+
+
+
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="/js/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Android权限大全 | 金条k的博客</title>
+        <meta name="author" content="金条k" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="icon" href="/images/favicon.png" />
+        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+                <div id="loading" v-show="loading">
+                    <div id="loading-circle">
+                        <h2>LOADING</h2>
+                        <p>加载过慢请开启缓存 浏览器默认开启</p>
+                        <p>若长时间无反应 可刷新后再尝试</p>
+                        <img src="/images/loading.gif" />
+                    </div>
+                </div>
+            </transition>
+            <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <div id="desktop-menu">
+        <a class="title" href="/">
+            <span>金条K的博客</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-home fa-fw"></i>
+            <span>&ensp;主页</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://v.kuaishou.com/W0Mu1M">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关注我</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;档案</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=-IBm0SiEKnwHrQX9VjzUvCnBw2YQQ2wi&noverify=0&personal_qrcode_source=4">
+            <i class="fa-brands fa-qq fa-fw"></i>
+            <span>&ensp;QQ</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://github.com/sansjtw">
+            <i class="fa-brands fa-github fa-fw"></i>
+            <span>&ensp;github</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;金条K的博客</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-home fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">主页</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://v.kuaishou.com/W0Mu1M">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关注我</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">档案</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=-IBm0SiEKnwHrQX9VjzUvCnBw2YQQ2wi&noverify=0&personal_qrcode_source=4">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-brands fa-qq fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">QQ</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/sansjtw">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-brands fa-github fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">github</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </div>
+</nav>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+            <transition name="into">
+                <div id="main" v-show="!loading">
+                    <div id="weather"></div>
+<script src="/js/weather.js"></script>
+
+<!-- 雪花特效3 -->
+
+  <script type="text/javascript" src="/js/snow3.js"></script>
+
+
+<div class="article">
+    <div>
+        <h1>Android权限大全</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/7/20
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Android%E9%80%86%E5%90%91/" style="color: #00a596">Android逆向</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="android权限介绍"><a href="#android权限介绍" class="headerlink" title="android权限介绍"></a>android权限介绍</h1><p>可以查看网站 <a target="_blank" rel="noopener" href="https://developer.android.google.cn/guide/topics/permissions/overview?hl=zh-cn">https://developer.android.google.cn/guide/topics/permissions/overview?hl=zh-cn</a> 了解android权限</p>
+<h1 id="android权限大全"><a href="#android权限大全" class="headerlink" title="android权限大全"></a>android权限大全</h1><p>访问网络<br>android.permission.INTERNET，访问网络连接，可能产生GPRS流量<br>android.permission.CHANGE_WIFI_STATE Wifi改变状态<br>android.permission.ACCESS_WIFI_STATE WiFi状态<br>android.permission.ACCESS NETWORK_STATE网络状态</p>
+<p>录制视频<br>android.permission.CAMERA<br>android.permission.RECORD_AUDIO<br>android.permission.WRITE_EXTERNAL_STORAGE底层访问权限<br>android.permission.CWJ_GROUP，允许CWJ账户组访问底层信息</p>
+<p>手机优化大师扩展权限<br>android.permission.CELL_PHONE_MASTER_EX，手机优化大师扩展权限</p>
+<p>控制定位更新<br>android.permission.CONTROL_LOCATION_UPDATES, 允许获得移动网络定位信息改变</p>
+<p>删除缓存文件<br>android.permission.DELETE_CACHE_FILES，允许应用删除缓存文件</p>
+<p>删除应用<br>android.permission.DELETE_PACKAGES，允许程序删除应用</p>
+<p>电源管理<br>android.permission.DEVICE_ POWER，允许访问底层电源管理</p>
+<p>应用诊断<br>android.permission.DIAGNOSTIC,允许程序到RW到诊断资源</p>
+<p>禁用键盘锁<br>android.permission.DISABLE_KEYGUARD， 允许程序禁用键盘锁</p>
+<p>转存系统信息<br>android.permission.DUMP，允许程序获取系统dump信息从系统服务</p>
+<p>状态栏控制<br>android.permission.EXPAND_STATUS_BAR，允许程序扩展或收缩状态栏</p>
+<p>工厂测试模式<br>android.permission.FACTORY_TEST,允许程序运行工厂测试模式</p>
+<p>使用闪光灯<br>android.permission.FLASHLIGHT，允许访问闪光灯强制后退<br>android.permission.FORCE_BACK，允许程序强制使用back后退按键，无论Activity是否在顶层</p>
+<p>访问账户Gmail列表<br>android.permission.GET_ACCOUNTS,访问GMail账户列表</p>
+<p>获取应用大小<br>android.permission.GET_PACKAGE_SIZE,获取应用的文件大小</p>
+<p>获取任务信息<br>android.permission.GET_TASKS,允许程序获取当前或最近运行的应用</p>
+<p>允许全局搜索<br>android.permission.GLOBAL_SEARCH,允许程序使用全局搜索功能</p>
+<p>硬件测试<br>android.permission.HARDWARE_TEST,访问硬件辅助设备，用于硬件测试</p>
+<p>注射事件<br>android.permission.INJECT _EVENTS，允许访问本程序的底层事件，获取按键、轨迹球的事件流</p>
+<p>安装定位提供<br>android.permission.INSTALL_LOCATION PROVIDER,安装定位提供</p>
+<p>安装应用程序<br>android.permission.INSTAL_PACKAGES，允许程序安装应用</p>
+<p>内部系统窗口<br>android.permission.INTERNAL_SYSTEM_WINDOW,允许程序打开内部窗口，不对第三方应用程序开放此权限</p>
+<p>结束后台进程<br>android.permission.KILL_BACKGROUND_PROCESSES，允许程序调用killBackgroundProcesses(String).方法结束后台进程</p>
+<p>管理账户<br>android.permission.MANAGE_ACCOUNTS, 允许程序管理AccountManager中的账户列表</p>
+<p>管理程序引用<br>android.permission.MANAGE_APP_TOKENS, 管理创建、摧毁、Z轴顺序，仅用于系统</p>
+<p>高级权限<br>android.permission.MTWEAK_USER, 允许mTweak用户访问高级系统权限</p>
+<p>社区权限<br>android.permission.MTWEAK_FORUM,允许使用mTweak社区权限</p>
+<p>软格式化<br>android.permission.MASTER_CLEAR,允许程序执行软格式化，删除系统配置信息</p>
+<p>修改声音设置<br>android.permission.MODIFY_AUDIO_SETTINGS,修改声音设置信息</p>
+<p>修改电话状态<br>android.permission.MODIFY_PHONE_STATE，修改电话状态，如飞行模式，但不包含替换系统拨号器界面格式化文件系统<br>android.permission.MOUNT_FORMAT_FILESYSTEMS，格式化可移动文件系统，比如格式化清空SD卡</p>
+<p>挂载文件系统<br>android.permission.MOUNT_UNMOUNT_FILESYSTEMS,挂载、反挂载外部文件系统</p>
+<p>允许NFC通讯<br>android.permission.NFC,允许程序执行NFC近距离通讯操作，用于移动支持</p>
+<p>永久Activity<br>android.permission.PERSISTENT_ACTIVITY, 创建一个永久的Activity, 该功能标记为将来将被移除</p>
+<p>处理拨出电话<br>android.permission.PROCESS_OUTGOING_CALLS,允许程序监视，修改或放弃播出电话</p>
+<p>读取日程提醒<br>android.permission.READ_CALENDAR,允许程序读取用户的日程信息</p>
+<p>读取联系人<br>android.permission.READ_CONTACTS,允许应用访问联系人通讯录信息</p>
+<p>屏幕截图<br>android.permission.READ_FRAME_BUFFER,读取帧缓存用于屏幕截图</p>
+<p>读取收藏夹和历史记录<br>com.android.browser.permission.READ_HISTORY_BOOKMARKS,读取浏览器收藏夹和历史记录</p>
+<p>读取输入状态<br>android.permission.READ_INPUT_STATE,读取当前键的输入状态，仅用于系统读取系统日志<br>android.permission.READ_LOGS，读取系统底层日志读取电话状态<br>android.permission.READ_PHONE_STATE,访问电话状态</p>
+<p>读取短信内容<br>android.permission.READ_SMS，读取短信内容读取同步设置<br>android.permission.READ_SYNC_SETTINGS，读取同步设置，读取Google在线同步设置</p>
+<p>读取同步状态<br>android.permission.READ_SYNC_STATS,读取同步状态，获得Google在线同步状态</p>
+<p>重启设备<br>android.permission.REBOOT, 允许程序重新启动设备开机自动允许<br>android.permission.RECEIVE_BOOT_COMPLETED, 允许程序开机自动运行</p>
+<p>接收彩信<br>android.permission.RECEIVE_MMS,接收彩信</p>
+<p>接收彩信<br>android.permission.RECEIVE _MMS,接收彩信接收短信</p>
+<p>android.permission.RECEIVE_SMS,接收短信接收Wap Push</p>
+<p>android.permission.RECEIVE_WAP_PUSH, 接收WAP PUSH信息</p>
+<p>录音<br>android.permission.RECORD_AUDIO, 录制声音通过手机或耳机的麦克</p>
+<p>排序系统任务<br>android.permission.REORDER_TASKS, 重新排序系统Z轴运行中的任务</p>
+<p>结束系统任务<br>android.permission.RESTART_PACKAGES,结束任务通过restartPackage(String)方法， 该方式将在外来放弃</p>
+<p>发送短信<br>android.permission.SEND_SMS,发送短信</p>
+<p>设置Activity观察器<br>android.permission.SET_ACTIVITY_WATCHER,设置Activity观察器一般用于monkey测试</p>
+<p>设置闹铃提醒<br>com.android.alarm.permission.SET_ALARM,设置闹铃提醒</p>
+<p>设置总是退出<br>android.permission.SET_ALWAYS_FINISH,设置程序在后台是否总是退出</p>
+<p>设置动画缩放</p>
+<p>android.permission.SET_ANIMATION_SCALE,设置全局动画缩放</p>
+<p>设置调试程序<br>android.permission.SET_DEBUG_APP,设置调试程序，一般用于开发</p>
+<p>设置屏幕方向<br>android.permission.SET_ORIENTATION,设置屏幕方向为横屏或标准方式显示，不用于普通应用</p>
+<p>设置应用参数<br>android.permission.SET_PREFERRED_APPLICATIONS,设置应用的参数，已不再工作具体查看addPackage ToPreferred(String)介绍</p>
+<p>设置进程限制<br>android. permission.SET_PROCESS_LIMIT,允许程序设置最大的进程数量的限制</p>
+<p>设置系统时间<br>android.permission.SET_TIME,设置系统时间设置系统时区</p>
+<p>android.permission.SET_TIME_ZONE,设置系统时区设置桌面壁纸</p>
+<p>android. permission.SET_WALLPAPER,设置桌面壁纸设置壁纸建议</p>
+<p>android.permission.SET_WALLPAPER_HINTS,设置壁纸建议</p>
+<p>发送永久进程信号<br>android.permission.SIGNAL_PERSISTENT_PROCESSES, 发送一个永久的进程信号</p>
+<p>状态栏控制<br>android.permission.STATUS_BAR，允许程序打开、关闭、禁用状态栏</p>
+<p>访问订阅内容<br>android.permission.SUBSCRIBED_FEEDS_READ,访问订阅信息的数据库</p>
+<p>写入订阅内容<br>android.permission.SUBSCRIBED_FEEDS_WRITE，写入或修改订阅内容的数据库</p>
+<p>显示系统窗口<br>android.permission.SYSTEM_ALERT_WINDOW,显示系统窗口</p>
+<p>更新设备状态<br>android.permission.UPDATE_DEVICE_STATS,更新设备状态</p>
+<p>使用证书<br>android.permission.USE_CREDENTIALS,允许程序请求验证从AccountManager使用SIP视频<br>android.permission.USE_SIP,允许程序使用SIP视频服务</p>
+<p>使用振动<br>android.permission.VIBRATE, 允许振动</p>
+<p>唤醒锁定<br>android.permission.WAKE_LOCK，允许程序在手机屏幕关闭后后台进程仍然运行</p>
+<p>写入GPRS接入点设置<br>android.permission.WRITE_APN_SETTINGS,写入网络GPRS接入点设置</p>
+<p>写入日程提醒<br>android. permission.WRITE_CALENDAR,写入日程，但不可读取</p>
+<p>写入联系人<br>android.permission.WRITE_CONTACTS,写入联系人，但不可读取</p>
+<p>写入外部存储<br>android.permission.WRITE_EXTERNAL_STORAGE,允许程序写入外部存储，如SD卡上写文件</p>
+<p>写入Google地图数据<br>android.permission.WRITE_GSERVICES,允许程序写入Google Map服务数据</p>
+<p>写入收藏夹和历史记录<br>com.android.browser.permission.WRITE_HISTORY_BOOKMARKS，写入浏览器历史记录或收藏夹，但不可读取</p>
+<p>读写系统敏感设置<br>android.permission.WRITE_SECURE_SETTINGS, 允许程序读写系统安全敏感的设置项</p>
+<p>读写系统设置<br>android.permission.WRITE_SETTINGS, 允许读写系统设置项</p>
+<p>编写短信<br>android.permission.WRITE_SMS, 允许编写短信写入在线同步设置<br>android.permission.WRITE_SYNC_SETTINGS,写入Google在线同步设置<br><uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/></p>
+<p>访问登记属性<br>android.permission.ACCESS_CHECKIN_PROPERTlES，读取或写入登记check-in数据库属性表的权限</p>
+<p>获取错略位置<br>android.permission.ACCESS_COARSE_LOCATION,通过WiFi或移动基站的方式获取用户错略的经纬度信息，定位精度大概误差在30~1500米</p>
+<p>获取精确位置<br>android.permission.ACCESS_FINE_LOCATION,通过GPS芯片接收卫星的定位信息，定位精度达10米以内</p>
+<p>访问定位额外命令<br>android.permission.ACCESS_LOCATION_EXTRA_COMMANDS，允许程序访问额外的定位提供者指令</p>
+<p>GPS定位获取模拟定位信息<br>android.permission.ACCESS_MOCK_LOCATION,获取模拟定位信息，一般用于帮助开发者调试应用</p>
+<p>获取网络状态<br>android.permission.ACCESS_NETWORK_STATE,获取网络信息状态，如当前的网络连接是否有效</p>
+<p>访问Surface Flinger<br>android.permission.ACCESS_SURFACE_FLINGER, Android平台.上底层的图形显示支持，一般用于游戏或照相机预览界面和底层模式的屏幕截图</p>
+<p>获取WiFi状态<br>android.permission.ACCESS_WIFI_STATE, 获取当的WiFi接入的状态以及WLAN热点的信息</p>
+<p>账户管理<br>android.permission.ACCOUNT_MANAGER,获取账户验证信息，主要为GMail账户信息，只有系统级进程才能访问的权限</p>
+<p>验证账户<br>android.permission.AUTHENTICATE_ACCOUNTS,允许一个程序通过账户验证方式访问账户管理ACCOUNT_MANAGER相关信息</p>
+<p>电量统计<br>android.permission.BATTERY_STATS, 获取电池电量统计信息</p>
+<p>绑定小插件<br>android.permission.BIND_APPWIDGET, 允许一个程序告诉appWidget服务需要访问小插件的数据库，非常少的应用才用到此权限</p>
+<p>绑定设备管理<br>android.permission.BIND_DEVICE_ADMIN,请求系统管理员接收者receiver,只有系统才能使用</p>
+<p>绑定输入法<br>android.permission.BIND_INPUT_METHOD，请求InputMethodService服务， 只有系统才能使用</p>
+<p>绑定RemoteView<br>android.permission.BIND_REMOTEVIEWS,必须通过RemoteViewsService服务来请求，只有系统才能用绑定壁纸<br>android.permission.BIND_WALLPAPER,必须通过WallpaperService服务来请求， 只有系统才能用使用蓝牙<br>android.permission.BLUETOOTH, 允许程序连接配对过的蓝牙设备</p>
+<p>蓝牙管理<br>android.permission.BLUETOOTH_ADMIN, 允许程序进行发现和配对新的蓝牙设备</p>
+<p>变成砖头<br>android.permission.BRICK, 能够禁用手机，非常危险，顾名思义就是让手机变成砖头</p>
+<p>应用删除时广播<br>android.permission.BROADCAST_PACKAGE_REMOVED,当一个应用在删除时触发一个广播</p>
+<p>收到短信时广播<br>android.permission.BROADCAST_SMS，当收到短信时触发一个广播</p>
+<p>连续广播<br>android.permission.BROADCAST_STICKY,允许一个程序收到广播后快速收到下一个广播</p>
+<p>WAP PUSH广播<br>android.permission.BROADCAST_WAP_PUSH，WAP PUSH服务收到后触发一个广播</p>
+<p>拨打电话<br>android.permission.CALL_PHONE,允许程序从非系统拨号器里输入电话号码</p>
+<p>通话权限<br>android.permission.CALL_PRIVILEGED，允许程序拨打电话，替换系统的拨号器界面</p>
+<p>拍照权限<br>android.permission.CAMERA, 允许访问摄像头进行拍照</p>
+<p>改变组件状态<br>android.permission.CHANGE_COMPONENT_ENABLED_STATE,改变组件是否启用状态</p>
+<p>改变配置<br>android.permission.CHANGE_CONFIGURATION, 允许当前应用改变配置，如定位</p>
+<p>改变网络状态<br>android.permission.CHANGE_NETWORK_STATE,改变网络状态如是否能联网</p>
+<p>改变WiFi多播状态<br>android.permission.CHANGE_WIFL_MULTICAST_STATE,改变WiFi多播状态</p>
+<p>改变WiFi状态<br>android.permission.CHANGE_WIFL_STATE,改变WiFi状态</p>
+<p>清除应用缓存<br>android.permission.CLEAR_APP_CACHE, 清除应用缓存</p>
+<p>清除用户数据<br>android.permission.CLEAR_APP_USER_DATA,清除应用的用户数据</p>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+                    <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+           一言:
+           <iframe src="https://v.api.aa1.cn/api/api-wenan-dujitang/index.php?aa1=text" width="-1" height="-1" iframeborder="no" ></iframe>
+        </div>
+        <div>
+            &copy;
+            2022 - 2023 金条k的博客
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;金条k
+        </div>
+        <div>
+            sansjtw@163.com
+        </div>
+        
+    </div>
+</footer>
+
+                </div>
+            </transition>
+            
+            <transition name="fade">
+                <div id="preview" ref="preview" v-show="previewShow">
+                    <img id="preview-content" ref="previewContent" />
+                </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo="sansjtw/sansjtw.github.io"
+    data-repo-id="R_kgDOJnZieQ"
+    data-category="General"
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+        
+        
+    <script src="/live2d/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":true,"model":{"jsonPath":"/live2d/assets/assets/haruto.model.json"},"display":{"position":"right","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>
