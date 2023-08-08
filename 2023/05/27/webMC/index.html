@@ -150,6 +150,7 @@
         <meta name="shenma-site-verification" content="9860eb37a8b1904749d7853f1b352eb1_1691042775">
         <meta name="baidu-site-verification" content="codeva-qQ9lP7ol78" />
         <title>webMC | 金条k的博客</title>
+        <link rel="stylesheet" href="./css/weather.css"> 
         <meta name="author" content="金条k" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
@@ -239,46 +240,46 @@
                 
                 <a href="/">
                     <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <div style="min-width: 20px; max-width: 50px; width: 20%">
                             <i class="fa-solid fa-home fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">主页</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 10%">主页</div>
                     </div>
                 </a>
                 
                 <a target="_blank" rel="noopener" href="https://v.kuaishou.com/W0Mu1M">
                     <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <div style="min-width: 20px; max-width: 50px; width: 20%">
                             <i class="fa-solid fa-id-card fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">关注我</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 10%">关注我</div>
                     </div>
                 </a>
                 
                 <a href="/archives">
                     <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <div style="min-width: 20px; max-width: 50px; width: 20%">
                             <i class="fa-solid fa-box-archive fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">档案</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 10%">档案</div>
                     </div>
                 </a>
                 
                 <a target="_blank" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=-IBm0SiEKnwHrQX9VjzUvCnBw2YQQ2wi&noverify=0&personal_qrcode_source=4">
                     <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <div style="min-width: 20px; max-width: 50px; width: 20%">
                             <i class="fa-brands fa-qq fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">QQ</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 10%">QQ</div>
                     </div>
                 </a>
                 
                 <a target="_blank" rel="noopener" href="https://github.com/sansjtw">
                     <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <div style="min-width: 20px; max-width: 50px; width: 20%">
                             <i class="fa-brands fa-github fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">github</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 10%">github</div>
                     </div>
                 </a>
                 
@@ -292,7 +293,25 @@
 
             <transition name="into">
                 <div id="main" v-show="!loading">
-                    <div id="weather"></div>
+                    
+<div id="tp-weather-widget"></div>
+<script>
+  (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+  window.SeniverseWeatherWidget('show', {
+    flavor: "bubble",
+    location: "WT029G15ETRJ",
+    geolocation: true,
+    language: "auto",
+    unit: "c",
+    theme: "auto",
+    token: "90d0fc81-3b4a-4cb3-9ac2-2022de72d223",
+    hover: "enabled",
+    container: "tp-weather-widget"
+  })
+</script>
+
+
+<div id="weather"></div>
 <script src="/js/weather.js"></script>
 
 <!-- 雪花特效3 -->
@@ -320,7 +339,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/javascript/" style="color: #ffa2c4">javascript</a>
+                <a href="/tags/javascript/" style="color: #00bcd4">javascript</a>
             </span>
             
         </span>
@@ -329,7 +348,7 @@
     
     <div class="content" v-pre>
         <h1 id="WebMC"><a href="#WebMC" class="headerlink" title="WebMC"></a>WebMC</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍:"></a>介绍:</h2><p>这是一个使用JavaScript编写的基于WebGL的网页版minecraft。<br>注:只是仿真，并不是官方版<br>jerrychan7大佬制作<br>我提供翻译</p>
-<h2 id="直接玩WebMC"><a href="#直接玩WebMC" class="headerlink" title="直接玩WebMC:"></a>直接玩WebMC:</h2><p><a target="_blank" rel="noopener" href="https://jerrychan7.github.io/WebMC">英文原版</a><br><a target="_blank" rel="noopener" href="https://sansjtw.github.io/WebMC">中文翻译版</a></p>
+<h2 id="直接玩WebMC"><a href="#直接玩WebMC" class="headerlink" title="直接玩WebMC:"></a>直接玩WebMC:</h2><p><a target="_blank" rel="noopener" href="https://jerrychan7.github.io/WebMC">英文原版</a><br><a href="https://sansjtw.github.io/WebMC">中文翻译版</a></p>
 <h2 id="WebMC源码"><a href="#WebMC源码" class="headerlink" title="WebMC源码:"></a>WebMC源码:</h2><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法:"></a>使用方法:</h3><p>需要运行在服务器上，因为有纹理图片的跨域问题。<br>若是有<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js</a>环境，那么可以在WebMC文件中执行</p>
 <pre><code class="shell">node server.js
 </code></pre>
@@ -351,7 +370,8 @@
     
 </div>
 
-                    <footer id="footer">
+                    <div>
+<footer id="footer">
     <div id="footer-wrap">
         <div>
            一言:
@@ -367,9 +387,9 @@
         <div>
             博客域名:
             <br>
-            <a href="https://sansjtw.netlify.app/" style="color: #FF00FFFF">sansjtw.netlify.app</a>
+            <a target="_blank" rel="noopener" href="https://sansjtw.netlify.app/" style="color: #FF00FFFF">sansjtw.netlify.app</a>
             <br>
-            <a target="_blank" rel="noopener" href="https://sansjtw.github.io/" style="color: #FF00FFFF">sansjtw.github.io</a>
+            <a href="https://sansjtw.github.io/" style="color: #FF00FFFF">sansjtw.github.io</a>
             博客原来的域名本来为sansjtw.github.io，因为某些原因无法被搜索引擎收录，所以sansjtw.github.io成为了备用域名，现在的主要域名为sansjtw.netlify.app
         <hr />
         </div>
