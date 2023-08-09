@@ -149,7 +149,7 @@
         <meta name="sogou_site_verification" content="hbGGB38bFJ" />
         <meta name="shenma-site-verification" content="9860eb37a8b1904749d7853f1b352eb1_1691042775">
         <meta name="baidu-site-verification" content="codeva-qQ9lP7ol78" />
-        <title>webMC | 金条k的博客</title>
+        <title>使用iapp实现QQ登陆 | 金条k的博客</title>
         <link rel="stylesheet" href="./css/weather.css"> 
         <meta name="author" content="金条k" />
         <meta name="description" content="" />
@@ -321,14 +321,14 @@
 
 <div class="article">
     <div>
-        <h1>webMC</h1>
+        <h1>使用iapp实现QQ登陆</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/5/27
+            2023/8/9
         </span>
         
         
@@ -339,12 +339,12 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E5%8E%9F%E5%88%9B/" style="color: #00a596">原创</a>
+                <a href="/tags/%E5%8E%9F%E5%88%9B/" style="color: #00bcd4">原创</a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/javascript/" style="color: #ffa2c4">javascript</a>
+                <a href="/tags/iapp/" style="color: #00a596">iapp</a>
             </span>
             
         </span>
@@ -352,14 +352,78 @@
     </div>
     
     <div class="content" v-pre>
-        <h1 id="WebMC"><a href="#WebMC" class="headerlink" title="WebMC"></a>WebMC</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍:"></a>介绍:</h2><p>这是一个使用JavaScript编写的基于WebGL的网页版minecraft。<br>注:只是仿真，并不是官方版<br>jerrychan7大佬制作<br>我提供翻译</p>
-<h2 id="直接玩WebMC"><a href="#直接玩WebMC" class="headerlink" title="直接玩WebMC:"></a>直接玩WebMC:</h2><p><a target="_blank" rel="noopener" href="https://jerrychan7.github.io/WebMC">英文原版</a><br><a target="_blank" rel="noopener" href="https://sansjtw.github.io/WebMC">中文翻译版</a></p>
-<h2 id="WebMC源码"><a href="#WebMC源码" class="headerlink" title="WebMC源码:"></a>WebMC源码:</h2><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法:"></a>使用方法:</h3><p>需要运行在服务器上，因为有纹理图片的跨域问题。<br>若是有<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js</a>环境，那么可以在WebMC文件中执行</p>
-<pre><code class="shell">node server.js
+        <h1 id="准备的项目与控件"><a href="#准备的项目与控件" class="headerlink" title="准备的项目与控件"></a>准备的项目与控件</h1><p>首先在iapp中创建一个项目，创建后点击”可视编程设计”，然后在”可视编程设计”中点击”控件”增加1个按扭控件，2个文本控件，1个图像控件，可以先删掉默认的控件，最后再创建一个名为”qq登陆”的myu界面<br><img src="/images/20230809-2/1.png" alt="1"></p>
+<h1 id="写入事件"><a href="#写入事件" class="headerlink" title="写入事件"></a>写入事件</h1><h3 id="1-按扭的”单击触屏事件”"><a href="#1-按扭的”单击触屏事件”" class="headerlink" title="1.按扭的”单击触屏事件”"></a>1.按扭的”单击触屏事件”</h3><pre><code class="裕v3">fn qq登陆.调用QQ登陆(&quot;1107961986&quot;,&quot;iAppQQLoginDemo&quot;,&quot;all&quot;,&quot;com.tencent.mobileqq&quot;)
 </code></pre>
-<p>指令来运行一个简单的服务器，然后通过<a target="_blank" rel="noopener" href="http://localhost:3000/%E8%BF%9B%E8%A1%8C%E8%AE%BF%E9%97%AE%E3%80%82">http://localhost:3000/进行访问。</a><br>若是你正在使用的IDE有自带的静态服务器功能，那可以通过IDE在浏览器中打开&#x2F;index.html文件。<br>还需要注意的是，你的浏览器必须开启和支持JavaScript扩展，并且因为跨域和中文版加入了中文字体，所以第一次打开可能需要一点时间</p>
-<h3 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载:"></a>源码下载:</h3><p><a target="_blank" rel="noopener" href="https://github.com/jerrychan7/WebMC">英文原版源码github</a><br><a target="_blank" rel="noopener" href="https://github.com/sansjtw/WebMC">中文翻译版源码github</a><br><a target="_blank" rel="noopener" href="https://gitee.com/sansjtw/WebMC">中文翻译版源码gitee</a></p>
-<p><img src="/images/WebMC1.png" alt="WebMC"></p>
+<h3 id="2-”界面事件”的”回调结果事件”"><a href="#2-”界面事件”的”回调结果事件”" class="headerlink" title="2.”界面事件”的”回调结果事件”"></a>2.”界面事件”的”回调结果事件”</h3><p>注:此代码部分需要更改</p>
+<pre><code class="裕v3">f(st_iT==null)
+&#123;
+  tw(&quot;登录取消&quot;)
+&#125;
+else
+&#123;
+  java(bundle,st_iT,&quot;android.content.Intent.getExtras&quot;)
+  java(info,bundle,&quot;android.os.BaseBundle.get&quot;,&quot;String&quot;,&quot;key_response&quot;)
+  json(info,info)
+  syso(info)
+  //openid:QQ授权登陆后返回的用户在该应用的唯一标识
+  json(info,&quot;get&quot;,&quot;openid&quot;,openid)
+  //access_token:QQ授权登陆后返回的访问令牌
+  json(info,&quot;get&quot;,&quot;access_token&quot;,access_token)
+  t()
+  &#123;
+    //腾讯QQ用户信息查询接口
+    s url = &quot;https://graph.qq.com/user/get_simple_userinfo&quot;
+    s ua = &quot;Mozilla/5.0 (Linux; Android 7.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.134 Mobile Safari/537.36 LeBrowser/7.4.0&quot;
+    ss(&quot;appid=1107961986&amp;access_token=&quot;+access_token+&quot;&amp;openid=&quot;+openid+&quot;&amp;Format=json&quot;,data)
+    //访问腾讯官方接口获取QQ用户相关个人信息
+    hs(url,data,&quot;utf-8&quot;,null,&quot;true&quot;,ua,back)
+    //json解析相关返回参数
+    json(back,back)
+    syso(back)
+    //nickname:用户在QQ空间的昵称
+    json(back,&quot;get&quot;,&quot;nickname&quot;,nickname)
+    //figureurl:头像
+    json(back,&quot;get&quot;,&quot;figureurl_2&quot;,figureurl)
+    ufnsui()
+    &#123;
+      //把用户信息在下面这些控件中显示出来，需要自行更改
+      us(文本1,&quot;text&quot;,nickname) //QQ名称
+      us(文本2,&quot;text&quot;,openid) //cookie
+      us(图像1,&quot;src&quot;,figureurl) //QQ头像
+      tw(&quot;登录成功&quot;)
+    &#125;
+  &#125;
+&#125;
+</code></pre>
+<h3 id="3-编辑”qq登陆”的myu界面内容"><a href="#3-编辑”qq登陆”的myu界面内容" class="headerlink" title="3.编辑”qq登陆”的myu界面内容"></a>3.编辑”qq登陆”的myu界面内容</h3><pre><code class="裕v3">fn 调用QQ登陆(app_id,app_name,scope,cmp)
+javanew(bundle,&quot;android.os.Bundle&quot;)
+javanew(params,&quot;android.os.Bundle&quot;)
+javags(data1,null,&quot;android.os.Build&quot;,&quot;MODEL&quot;)
+javags(data2,null,&quot;android.os.Build$VERSION&quot;,&quot;SDK&quot;)
+javags(data3,null,&quot;android.os.Build&quot;,&quot;RELEASE&quot;)
+java(null,params,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;status_os&quot;,&quot;String&quot;,data3)
+java(null,params,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;client_id&quot;,&quot;String&quot;,app_id)
+java(null,params,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;format&quot;,&quot;String&quot;,&quot;json&quot;)
+java(null,params,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;status_version&quot;,&quot;String&quot;,data2)
+java(null,params,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;oauth_app_name&quot;,&quot;String&quot;,app_name)
+java(null,params,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;status_machine&quot;,&quot;String&quot;,data1)
+java(null,params,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;pf&quot;,&quot;String&quot;,&quot;openmobile_android&quot;)
+java(null,params,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;sdkp&quot;,&quot;String&quot;,&quot;a&quot;)
+java(null,params,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;sdkv&quot;,&quot;String&quot;,&quot;3.3.0.lite&quot;)
+java(null,params,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;scope&quot;,&quot;String&quot;,scope)
+java(null,params,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;need_pay&quot;,&quot;String&quot;,&quot;1&quot;)
+java(null,bundle,&quot;android.os.Bundle.putBundle&quot;,&quot;String&quot;,&quot;key_params&quot;,&quot;android.os.Bundle&quot;,params)
+java(null,bundle,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;key_action&quot;,&quot;String&quot;,&quot;action_login&quot;)
+java(null,bundle,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;appeid&quot;,&quot;String&quot;,app_id)
+java(null,bundle,&quot;android.os.BaseBundle.putString&quot;,&quot;String&quot;,&quot;key_request_code&quot;,&quot;String&quot;,&quot;11101&quot;)
+sit(intent,&quot;classname&quot;,cmp,&quot;com.tencent.open.agent.AgentActivity&quot;)
+java(null,intent,&quot;android.content.Intent.putExtras&quot;,&quot;android.os.Bundle&quot;,bundle)
+uit(intent, &quot;result&quot;, 0)
+end fn
+</code></pre>
+<h1 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h1><p>全部写入后，可通过”运行”看效果，更多的登入信息可以在”调试”中看效果，最后打包既可</p>
+<h1 id="附-项目源码"><a href="#附-项目源码" class="headerlink" title="附:项目源码"></a>附:项目源码</h1><p><a href="/images/20230809-2/%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81.iApp">点击下载</a></p>
 
     </div>
     
