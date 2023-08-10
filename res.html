@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>金条k的博客-资源集结分享网站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            font-weight: normal;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 300px;
+            font-size: 16px;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .card-description {
+            font-size: 16px;
+        }
+
+        .card-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* 响应式布局 */
+        @media only screen and (max-width: 768px) {
+            /* 手机布局 */
+            body {
+                padding: 10px;
+            }
+
+            .search-input {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .card-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>金条k的博客-资源集结分享网站</h1>
+    <h2>博客中的资源</h2>
+
+    <div class="search-container">
+        <input type="text" class="search-input" id="searchInput" placeholder="搜索资源标题" oninput="searchResources()">
+    </div>
+
+    <div class="card">
+        <div>
+            <h2 class="card-title">iapp QQ登陆源码</h2>
+            <p class="card-description">资源来源:《使用iapp实现QQ登陆》</p>
+        </div>
+        <div class="card-buttons">
+            <a class="btn" href="/images/20230809-2/项目源码.iApp">下载</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <h2 class="card-title">AutoMihoyoBBS</h2>
+            <p class="card-description">资源来源:《米游社辅助自动签到脚本》</p>
+        </div>
+        <div class="card-buttons">
+            <a class="btn" href="https://sansjtw.github.io/images/AutoMihoyoBBS/AutoMihoyoBBS.zip">下载</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <h2 class="card-title">webMC源码</h2>
+            <p class="card-description">资源来源:《webMC》</p>
+        </div>
+        <div class="card-buttons">
+            <a class="btn" href="https://github.com/jerrychan7/WebMC">预览(英文原版源码github)</a>
+            <a class="btn" href="https://github.com/sansjtw/WebMC">预览(中文翻译版源码github)</a>
+            <a class="btn" href="https://gitee.com/sansjtw/WebMC">预览(中文翻译版源码gitee)</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <h2 class="card-title">解析蓝奏云接口源码</h2>
+            <p class="card-description">资源来源:《解析蓝奏云接口源码》</p>
+        </div>
+        <div class="card-buttons">
+            <a class="btn" href="https://github.com/sansjtw/jxzy">预览(github源码)</a>
+            <a class="btn" href="https://gitee.com/sansjtw/jxlzy">预览(gitee源码)</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <h2 class="card-title">金条云网盘1.6</h2>
+            <p class="card-description">资源来源:《金条云网盘1.6版更新》</p>
+        </div>
+        <div class="card-buttons">
+            <a class="btn" href="https://sansjtw.github.io/zk/%E9%87%91%E6%9D%A1%E4%BA%91%E7%BD%91%E7%9B%98_1.6.apk">下载</a>
+        </div>
+    </div>
+
+    <script>
+        function searchResources() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var cards = document.getElementsByClassName('card');
+
+            for (var i = 0; i < cards.length; i++) {
+                var title = cards[i].querySelector('.card-title').textContent.toLowerCase();
+                if (title.includes(input)) {
+                    cards[i].style.display = 'flex';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
