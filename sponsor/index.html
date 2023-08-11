@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>赞助网站</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .payment-image {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            max-width: 300px;
+        }
+
+        .payment-image:hover {
+            transform: scale(1.6);
+        }
+    </style>
+    <script>
+        function toggleImageSize() {
+            var image = document.getElementById('paymentImage');
+            if (image.classList.contains('enlarged')) {
+                image.classList.remove('enlarged');
+            } else {
+                image.classList.add('enlarged');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>赞助我们</h1>
+        <img id="paymentImage" class="payment-image" src="wechat-pay.png" alt="微信支付" onclick="toggleImageSize()">
+        <h5>点击图片放大</h5>
+        <h1>为什么会增加赞助功能</h1>
+        <h3>我们决定增加赞助功能主要出于以下几个原因：</h3>
+
+<a class="f1">1.域名费用：为了保持网站的在线状态，我们需要支付域名注册和续费的费用。这些费用是确保网站能够在互联网上正常访问的重要组成部分。通过赞助功能，我们能够在财务上获得一些支持，有助于支付域名费用并保持网站的稳定运作。</h5>
+<br>
+<br>
+<a class="f2">2.网站的免费资源和免费教学：我们提供免费的资源和教学内容，帮助用户学习和提升技能。这些免费资源的创建和维护需要投入时间和精力。通过赞助，我们能够继续提供免费资源，并确保网站的可持续运行，同时负担得起域名费用。</h5>
+<br>
+<h5>我们会感谢您的赞助，祝好人一生平安</h5>
+<a href="https://sansjtw.xyz/" style="color: #FF00FFFF">返回博客</a>
+    </div>
+</body>
+</html>
