@@ -153,7 +153,7 @@
         <meta name="sogou_site_verification" content="hbGGB38bFJ" />
         <meta name="shenma-site-verification" content="9860eb37a8b1904749d7853f1b352eb1_1691042775">
         <meta name="baidu-site-verification" content="codeva-qQ9lP7ol78" />
-        <title>在软件中添加弹窗 | 金条k的博客</title>
+        <title>termux值得尝试的有趣命令·下 | 金条k的博客</title>
         <link rel="stylesheet" href="./css/weather.css"> 
         <meta name="author" content="金条k" />
         <meta name="description" content="" />
@@ -332,14 +332,14 @@
 
 <div class="article">
     <div>
-        <h1>在软件中添加弹窗</h1>
+        <h1>termux值得尝试的有趣命令·下</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/7/21
+            2023/8/15
         </span>
         
         
@@ -350,12 +350,12 @@
             
             <span class="tag">
                 
-                <a href="/tags/Android%E9%80%86%E5%90%91/" style="color: #00bcd4">Android逆向</a>
+                <a href="/tags/%E5%8E%9F%E5%88%9B/" style="color: #00bcd4">原创</a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/%E5%8E%9F%E5%88%9B/" style="color: #ffa2c4">原创</a>
+                <a href="/tags/termux/" style="color: #00bcd4">termux</a>
             </span>
             
         </span>
@@ -363,68 +363,50 @@
     </div>
     
     <div class="content" v-pre>
-        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>需要使用mt管理器进行修改操作，无需电脑操作，可将软件内添加弹窗</p>
-<h1 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h1><p>0.一台手机<br>1.<a target="_blank" rel="noopener" href="https://mt2.cn/">mt管理器</a><br>2.需要添加弹窗的软件(建议未加固的)</p>
-<h1 id="开始教学"><a href="#开始教学" class="headerlink" title="开始教学"></a>开始教学</h1><h2 id="第一步-提取需要添加弹窗的软件的APK安装包"><a href="#第一步-提取需要添加弹窗的软件的APK安装包" class="headerlink" title="第一步:提取需要添加弹窗的软件的APK安装包"></a>第一步:提取需要添加弹窗的软件的APK安装包</h2><p>1.打开mt管理器<br>2.点击左上角的三条杠进入菜单<br>3.在菜单中的工具分类中点击”安装包提取”<br>4.在里面点击需要添加弹窗的软件<br>5.点击”提取安装包”<br><img src="/images/20230721/1.jpg" alt="1"><br>6.提取成功后点击”定位”<br>此时你就进入了为&#x2F;storage&#x2F;emulated&#x2F;0&#x2F;MT2&#x2F;apks&#x2F;路径当中，在这里可以看到刚才的软件安装包</p>
-<h2 id="第二步-使用Activity记录记录软件的界面"><a href="#第二步-使用Activity记录记录软件的界面" class="headerlink" title="第二步:使用Activity记录记录软件的界面"></a>第二步:使用Activity记录记录软件的界面</h2><p>1.再次点击左上角的三条杠进入菜单<br>2.在菜单中的工具分类中点击”Activity记录”<br>3.点击”启动服务”后跳转到辅助功能设置，在辅助功能中打开Activity记录<br>4.然后返回mt管理器再次点击”启动服务”开始记录界面<br>5.启动后迅速打开需要添加弹窗的软件，然后抓到你需要添加弹窗的页面<br>6.抓到后返回mt管理器，Activity记录中都增加了一些软件名称与com开头的页面名<br>7.点击你抓到的需要添加弹窗的页面与软件名称，复制页面名即可。<br>此时软件的界面名记录成功了，请注意不要抓错软件了，不然无效</p>
-<h2 id="第三步-开始在软件中添加弹窗"><a href="#第三步-开始在软件中添加弹窗" class="headerlink" title="第三步:开始在软件中添加弹窗"></a>第三步:开始在软件中添加弹窗</h2><p>1.点击你第一步提取的安装包<br>2.点击查看<br><img src="/images/20230721/2.jpg" alt="2"><br>3.可以看到安装包中有很多文件，这是拆包后获取的<br>4.点击软件中的classes.dex文件或者dex格式的文件<br>5.点击Dex编辑器++<br><img src="/images/20230721/3.jpg" alt="3"><br>6.如果有多个dex格式文件的话，点击Dex编辑器++后再点全选，之后再点确定<br><img src="/images/20230721/4.jpg" alt="4"><br>7.在Dex编辑器++中点击”搜索”再在功能分类中点击发起新搜索<br>8.在搜索内容下填写你使用Activity记录记录的com开头的页面名，路径不用管，搜索类型为类名，最后点确定<br><img src="/images/20230721/5.jpg" alt="5"><br>9.搜索完成后，在功能分类中点击”在当前结果搜索”<br>10.查找内容为</p>
-<pre><code>Oncreat
+        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p><a target="_blank" rel="noopener" href="https://termux.dev/cn/">Termux</a>是一款强大而灵活的安卓终端模拟器，它不仅可以提供您在移动设备上使用命令行工具的便利性，还可以发挥想象力，探索各种有趣的命令和功能。在这篇文章中，将介绍一些在 Termux 上值得尝试的有趣命令，接上章。<br>没看过<a href="/2023/08/13/termux%E5%80%BC%E5%BE%97%E5%B0%9D%E8%AF%95%E7%9A%84%E6%9C%89%E8%B6%A3%E5%91%BD%E4%BB%A4/">《termux值得尝试的有趣命令·上》</a>的可以先看一下上章</p>
+<h1 id="有趣的命令"><a href="#有趣的命令" class="headerlink" title="有趣的命令"></a>有趣的命令</h1><h3 id="1-fortune"><a href="#1-fortune" class="headerlink" title="1.fortune"></a>1.fortune</h3><p>“fortune” 是一个命令行工具，用于生成随机的名人名言、笑话或其他随机文本。通过 </p>
+<pre><code>apt-get install fortune 
 </code></pre>
-<p>搜索类型为方法名，最后点击确定<br><img src="/images/20230721/6.jpg" alt="6"><br>11.图文教学<br><img src="/images/20230721/7.jpg" alt="7"><br>12.将弹窗代码插入在”method public onCreate ……”的下行，看图片(弹窗代码放在最后)<br><img src="/images/20230721/8.jpg" alt="8"><br>13.最后返回，出现提示后点击确定，建议在选中自动签名<br><img src="/images/20230721/9.jpg" alt="9"><br>14.如果你没有选中签名，那么返回后，点击刚才的安装包，如果出现了签名状态出现检验不通过，那么按步骤，点击功能→APK签名→确定即可，签名完成后出现两个安装包，点击安装包如果签名校验通过就可以安装了！！！<br>15.点击安装后如果提示安装包签名不一致就点击确定，把原来的安装包给删除，否则无法安装，如果有重要数据建议备份，否则数据流失，卸载后重新安装即可<br>16.如果无法打开软件，可能为签名问题或dex修改出错,建议直接换个软件重试</p>
-<h1 id="弹窗代码"><a href="#弹窗代码" class="headerlink" title="弹窗代码"></a>弹窗代码</h1><h2 id="1-Toast提示弹窗"><a href="#1-Toast提示弹窗" class="headerlink" title="1.Toast提示弹窗"></a>1.Toast提示弹窗</h2><pre><code>const-string v0, &quot;这里填内容&quot;
-const/4 v1, 0x1
-invoke-static &#123;p0, v0, v1&#125;, Landroid/widget/Toast;-&gt;makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-move-result-object v0
-invoke-virtual &#123;v0&#125;, Landroid/widget/Toast;-&gt;show()V
+<p>安装后，运行 </p>
+<pre><code>fortune 
 </code></pre>
-<p>效果图:<br><img src="/images/20230721/10.jpg" alt="10"></p>
-<h2 id="2-弹窗-内容"><a href="#2-弹窗-内容" class="headerlink" title="2.弹窗+内容"></a>2.弹窗+内容</h2><pre><code>new-instance v0, Landroid/app/AlertDialog$Builder;
-invoke-direct &#123;v0, p0&#125;, Landroid/app/AlertDialog$Builder;-&gt;&lt;init&gt;(Landroid/content/Context;)V   
-const-string v1, &quot;这是内容&quot;
-invoke-virtual &#123;v0, v1&#125;, Landroid/app/AlertDialog$Builder;-&gt;setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;  
-move-result-object v0
-invoke-virtual &#123;v0&#125;, Landroid/app/AlertDialog$Builder;-&gt;show()Landroid/app/AlertDialog;
+<p>命令可以随机获取一条文本。<br><img src="/images/20230815/1.png" alt="1"></p>
+<h3 id="2-neofetch"><a href="#2-neofetch" class="headerlink" title="2.neofetch"></a>2.neofetch</h3><p>“neofetch” 是一个命令行工具，用于显示系统信息和 ASCII 艺术图案的 Linux 发行版或操作系统。使用 </p>
+<pre><code>apt-get install neofetch 
 </code></pre>
-<p>点击空白处即可取消，效果图:<br><img src="/images/20230721/11.jpg" alt="11"></p>
-<h2 id="3-弹窗-内容-标题"><a href="#3-弹窗-内容-标题" class="headerlink" title="3.弹窗+内容+标题"></a>3.弹窗+内容+标题</h2><pre><code>new-instance v0, Landroid/app/AlertDialog$Builder;
-invoke-direct &#123;v0, p0&#125;, Landroid/app/AlertDialog$Builder;-&gt;&lt;init&gt;(Landroid/content/Context;)V
-const-string v1, &quot;标题&quot;
-invoke-virtual &#123;v0, v1&#125;, Landroid/app/AlertDialog$Builder;-&gt;setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-move-result-object v0
-const-string v1, &quot;这是内容&quot;
-invoke-virtual &#123;v0, v1&#125;, Landroid/app/AlertDialog$Builder;-&gt;setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-move-result-object v0
-invoke-virtual &#123;v0&#125;, Landroid/app/AlertDialog$Builder;-&gt;show()Landroid/app/AlertDialog;
+<p>安装后，运行 </p>
+<pre><code>neofetch 
 </code></pre>
-<p>效果图:<br><img src="/images/20230721/12.jpg" alt="12"></p>
-<h2 id="4-弹窗-内容-标题-按钮"><a href="#4-弹窗-内容-标题-按钮" class="headerlink" title="4.弹窗+内容+标题+按钮"></a>4.弹窗+内容+标题+按钮</h2><pre><code>new-instance v0, Landroid/app/AlertDialog$Builder;
-
-invoke-direct &#123;v0, p0&#125;, Landroid/app/AlertDialog$Builder;-&gt;&lt;init&gt;(Landroid/content/Context;)V
-
-const-string v1, &quot;标题&quot;
-
-invoke-virtual &#123;v0, v1&#125;, Landroid/app/AlertDialog$Builder;-&gt;setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-move-result-object v0
-
-const-string v1, &quot;这是内容&quot;
-
-invoke-virtual &#123;v0, v1&#125;, Landroid/app/AlertDialog$Builder;-&gt;setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-move-result-object v0
-
-const-string v1, &quot;按钮&quot;
-
-const/4 v2, 0x0
-
-invoke-virtual &#123;v0, v1, v2&#125;, Landroid/app/AlertDialog$Builder;-&gt;setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-move-result-object v0
-
-invoke-virtual &#123;v0&#125;, Landroid/app/AlertDialog$Builder;-&gt;show()Landroid/app/AlertDialog;
+<p>命令可以显示系统信息和一个系统 ASCII 艺术图案。<br><img src="/images/20230815/2.png" alt="2"></p>
+<h3 id="3-asciiquarium"><a href="#3-asciiquarium" class="headerlink" title="3.asciiquarium"></a>3.asciiquarium</h3><p>“asciiquarium” 是一个命令行下的鱼缸模拟器，它通过 ASCII 字符来创建一个可交互的鱼缸环境。使用 </p>
+<pre><code>pkg install asciiquarium 
 </code></pre>
-<p>演示图:<br><img src="/images/20230721/13.jpg" alt="13"></p>
-<h1 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h1><p>你学废了吗？</p>
+<p>安装后，运行 </p>
+<pre><code>asciiquarium 
+</code></pre>
+<p>命令即可观看终端中的鱼和其他海洋生物。</p>
+<h3 id="4-nsnake"><a href="#4-nsnake" class="headerlink" title="4.nsnake"></a>4.nsnake</h3><p>“nsnake” 是一个经典的贪吃蛇游戏的命令行版本。使用 </p>
+<pre><code>pkg install nsnake 
+</code></pre>
+<p>安装后，运行 </p>
+<pre><code>nsnake 
+</code></pre>
+<p>命令即可开始游戏，在终端中控制蛇吃果实。<br><img src="/images/20230815/4.png" alt="4"></p>
+<h3 id="5-nyancat"><a href="#5-nyancat" class="headerlink" title="5.nyancat"></a>5.nyancat</h3><p>“nyancat” 是一个以彩虹猫为主题的动画和音乐效果的命令行工具。 使用 </p>
+<pre><code>pkg install nyancat 
+</code></pre>
+<p>安装后，运行 </p>
+<pre><code>nyancat 
+</code></pre>
+<p>命令即可触发精彩的循环彩虹猫动画。<br><img src="/images/20230815/5.png" alt="5"></p>
+<h3 id="6-oneko"><a href="#6-oneko" class="headerlink" title="6.oneko"></a>6.oneko</h3><p>“Oneko” 是一个在屏幕上显示一个追逐鼠标指针的小猫的命令行工具。使用 </p>
+<pre><code>pkg install oneko-sakura 
+</code></pre>
+<p>安装后，运行 </p>
+<pre><code>oneko 
+</code></pre>
+<p>命令即可在终端中看到可爱的追踪猫咪。</p>
+<h1 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h1><p>今天的内容就分享到这这里，下期见</p>
 
     </div>
     
