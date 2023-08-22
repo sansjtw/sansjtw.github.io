@@ -143,7 +143,7 @@
         <meta name="bytedance-verification-code" content="hEp2pB2n6aUhi8/kb3/y" />
         <meta name="360-site-verification" content="4d10373544663ec6a30bab7888e9bc06" />
         <meta name="baidu-site-verification" content="codeva-SlfCLgWw5l" />
-        <title>webMC | 金条k的博客</title>
+        <title>termux与Ubuntu安装图形桌面 | 金条k的博客</title>
         <link rel="stylesheet" href="./css/weather.css"> 
         <meta name="author" content="金条k" />
         <meta name="description" content="" />
@@ -322,14 +322,14 @@
 
 <div class="article">
     <div>
-        <h1>webMC</h1>
+        <h1>termux与Ubuntu安装图形桌面</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/5/27
+            2023/8/22
         </span>
         
         
@@ -340,12 +340,17 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E5%8E%9F%E5%88%9B/" style="color: #00a596">原创</a>
+                <a href="/tags/%E5%8E%9F%E5%88%9B/" style="color: #ffa2c4">原创</a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/javascript/" style="color: #03a9f4">javascript</a>
+                <a href="/tags/termux/" style="color: #00a596">termux</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ubuntu/" style="color: #03a9f4">ubuntu</a>
             </span>
             
         </span>
@@ -353,14 +358,30 @@
     </div>
     
     <div class="content" v-pre>
-        <h1 id="WebMC"><a href="#WebMC" class="headerlink" title="WebMC"></a>WebMC</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍:"></a>介绍:</h2><p>这是一个使用JavaScript编写的基于WebGL的网页版minecraft。<br>注:只是仿真，并不是官方版<br>jerrychan7大佬制作<br>我提供翻译</p>
-<h2 id="直接玩WebMC"><a href="#直接玩WebMC" class="headerlink" title="直接玩WebMC:"></a>直接玩WebMC:</h2><p><a target="_blank" rel="noopener" href="https://jerrychan7.github.io/WebMC">英文原版</a><br><a target="_blank" rel="noopener" href="https://sansjtw.github.io/WebMC">中文翻译版</a></p>
-<h2 id="WebMC源码"><a href="#WebMC源码" class="headerlink" title="WebMC源码:"></a>WebMC源码:</h2><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法:"></a>使用方法:</h3><p>需要运行在服务器上，因为有纹理图片的跨域问题。<br>若是有<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js</a>环境，那么可以在WebMC文件中执行</p>
-<pre><code class="shell">node server.js
+        <h1 id="为什么选择安装图形桌面"><a href="#为什么选择安装图形桌面" class="headerlink" title="为什么选择安装图形桌面"></a>为什么选择安装图形桌面</h1><p>在<a target="_blank" rel="noopener" href="https://www.ubuntu-china.cn/">Ubuntu</a>中与<a target="_blank" rel="noopener" href="https://termux.dev/cn/">termux</a>中安装图形桌面的原因除了方便用户使用开发工具和提供更易于接受的计算机操作界面外，还可以帮助用户更好地管理操作系统。图形界面可以提供友好的用户界面，使得操作系统更易于使用和理解。因此，在Ubuntu中安装图形桌面是一个非常实用的选择。</p>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>准备一个<a target="_blank" rel="noopener" href="https://www.ubuntu-china.cn/">Ubuntu</a>终端系统或者<a target="_blank" rel="noopener" href="https://termux.dev/cn/">termux</a>，termux可以查看上期的文章安装Ubuntu后再安装图形桌面:<a href="/2023/08/16/termux%E5%AE%89%E8%A3%85ubuntu%E7%8E%AF%E5%A2%83/">《termux安装ubuntu环境》</a>，termux手机准备好<a target="_blank" rel="noopener" href="https://www.realvnc.com/en/connect/download/viewer/">VNC</a></p>
+<h1 id="开始教学"><a href="#开始教学" class="headerlink" title="开始教学"></a>开始教学</h1><p>1.在Ubuntu中输入安装脚本命令</p>
+<pre><code>bash -c &quot;$(curl https://gitee.com/sansjtw/vnckali/raw/master/kalisansjtw.sh)&quot;
 </code></pre>
-<p>指令来运行一个简单的服务器，然后通过<a target="_blank" rel="noopener" href="http://localhost:3000/%E8%BF%9B%E8%A1%8C%E8%AE%BF%E9%97%AE%E3%80%82">http://localhost:3000/进行访问。</a><br>若是你正在使用的IDE有自带的静态服务器功能，那可以通过IDE在浏览器中打开&#x2F;index.html文件。<br>还需要注意的是，你的浏览器必须开启和支持JavaScript扩展，并且因为跨域和中文版加入了中文字体，所以第一次打开可能需要一点时间</p>
-<h3 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载:"></a>源码下载:</h3><p><a target="_blank" rel="noopener" href="https://github.com/jerrychan7/WebMC">英文原版源码github</a><br><a target="_blank" rel="noopener" href="https://github.com/sansjtw/WebMC">中文翻译版源码github</a><br><a target="_blank" rel="noopener" href="https://gitee.com/sansjtw/WebMC">中文翻译版源码gitee</a></p>
-<p><img src="/images/WebMC1.png" alt="WebMC"></p>
+<p>然后回车</p>
+<p>2.回车后会出现 “是否已安装dialog和fortune软件包？(y&#x2F;n)” ，直接输入”n”回车，会下载两个软件包，下载中可能会停止，回车即可</p>
+<p>3.下载完成后，会出现一个图形界面的”选择菜单”<br><img src="/images/20230822/1.png" alt="1"><br>需要通过↑→↓←键盘进行操作，选中”下载图形桌面”然后回车</p>
+<p>4.可能还会弹出提示与”按回车键继续”，回车即可</p>
+<p>5.此时会出现“请选择桌面”的选择<br><img src="/images/20230822/2.png" alt="2"><br>我们选xfce4桌面，可以选其他的</p>
+<p>6.选择后，会下载文件，等待下载</p>
+<p>7.部分地方可能会下载慢，需要进行翻墙下载</p>
+<p>8.漫长的等待后，出现了以下界面<br><img src="/images/20230822/3.png" alt="3"><br>这是选择语言，我们选择中文Chinese(19)</p>
+<p>9.选择后，出现了以下界面<br><img src="/images/20230822/4.png" alt="4"><br>这是选择中国民族方言，我们选择直接选中文官方语1</p>
+<p>10.再次等待</p>
+<p>11.下载完成后，出现了以下选择<br><img src="/images/20230822/5.png" alt="5"><br>这是要设置vnc的密码，这里可以输入6位数密码，并且要记住它，可能还会出现Verify:，这是确定密码，输入和刚才相同的密码</p>
+<p>12.最后显显示“启动成功！”就下载完成了</p>
+<p>13.此时我们返回Ubuntu，输入</p>
+<pre><code>vncsansjtw
+</code></pre>
+<p>回车，出现了以下几个字就成功了<br><img src="/images/20230822/6.png" alt="6"></p>
+<p>14.此时我们打开vnc viewer，点击右下角的绿色+号，在Address框内输入启动成功后的下面的ip与端口，我这里是127.0.0.1:5901，第二个name框可以不填，乱填也行</p>
+<p>15.点击CNNECT进入桌面，还要输密码，密码就我们之前输入的6位数密码，输入后，点击右上角“CONTINUE”进入桌面</p>
+<p>16.桌面正常显示就成功了<br><img src="/images/20230822/7.png" alt="7"></p>
 
     </div>
     
