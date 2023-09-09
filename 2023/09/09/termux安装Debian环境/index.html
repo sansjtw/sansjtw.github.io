@@ -143,7 +143,7 @@
         <meta name="bytedance-verification-code" content="hEp2pB2n6aUhi8/kb3/y" />
         <meta name="360-site-verification" content="4d10373544663ec6a30bab7888e9bc06" />
         <meta name="baidu-site-verification" content="codeva-SlfCLgWw5l" />
-        <title>termux安装ubuntu环境 | 金条k的博客</title>
+        <title>termux安装Debian环境 | 金条k的博客</title>
         <link rel="stylesheet" href="./css/weather.css"> 
         <meta name="author" content="金条k" />
         <meta name="description" content="" />
@@ -322,14 +322,14 @@
 
 <div class="article">
     <div>
-        <h1>termux安装ubuntu环境</h1>
+        <h1>termux安装Debian环境</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/8/16
+            2023/9/9
         </span>
         
         
@@ -340,12 +340,12 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E5%8E%9F%E5%88%9B/" style="color: #03a9f4">原创</a>
+                <a href="/tags/%E5%8E%9F%E5%88%9B/" style="color: #00a596">原创</a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/termux/" style="color: #00a596">termux</a>
+                <a href="/tags/termux/" style="color: #ffa2c4">termux</a>
             </span>
             
         </span>
@@ -353,21 +353,29 @@
     </div>
     
     <div class="content" v-pre>
-        <h1 id="termux为什么要安装ubuntu？"><a href="#termux为什么要安装ubuntu？" class="headerlink" title="termux为什么要安装ubuntu？"></a>termux为什么要安装ubuntu？</h1><p>众所周知，<a target="_blank" rel="noopener" href="https://termux.dev/cn/">Termux</a>是Android平台上的一个模拟终端应用程序，它提供了许多常用的Linux命令和工具。尽管Termux本身已经提供了一些常用的Linux命令和工具，但有些情况下用户可能需要使用更多的工具和功能，而这些工具和功能在Android平台上并不直接可用。<br>在这种情况下，用户可以选择在Termux中安装Ubuntu，以获得更多的Linux命令、工具和功能。Ubuntu是一个广泛使用的Linux发行版，拥有庞大的软件包集合，包括各种开发工具、服务器软件、桌面环境等。<br>通过在Termux中安装Ubuntu，用户可以获得更多的Linux软件包，并且可以享受到更多的Linux操作系统的功能和特性。例如，使用Ubuntu，用户可以更方便地进行软件开发、运行服务器、使用桌面环境等。<br>这期文章，将在termux中讲述如何安装ubuntu。</p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p>1.<a target="_blank" rel="noopener" href="https://termux.dev/cn/">termux APK</a></p>
-<h3 id="换源准备"><a href="#换源准备" class="headerlink" title="换源准备"></a>换源准备</h3><p>termux在安装ubuntu或其他依赖包时，可能会遇到卡顿，慢或下载失败，所以建议换国内源，换源看这期:<a href="/2023/06/04/termux%E6%8D%A2%E6%BA%90/">《termux换源》</a></p>
-<h1 id="开始教程"><a href="#开始教程" class="headerlink" title="开始教程"></a>开始教程</h1><p>1.打开termux<br>2.输入安装脚本</p>
-<pre><code>bash -c &quot;$(curl https://gitee.com/sansjtw/vnckali/raw/master/kalisansjtw.sh)&quot;
+        <h1 id="Debian介绍"><a href="#Debian介绍" class="headerlink" title="Debian介绍"></a>Debian介绍</h1><p><a target="_blank" rel="noopener" href="https://www.debian.org/">debian</a>是一个以自由软件和开放源代码为核心的操作系统，旨在创建一个完全自由、稳定、可靠并且易于使用的操作系统，它由一系列的Linux发行版组成，被广泛用于<code>服务器、桌面和嵌入式设备</code>等领域，是现今众多Linux发行版中最受欢迎的一个。<br><img src="/images/20230909/1.png" alt="1"></p>
+<h1 id="proot-distro介绍"><a href="#proot-distro介绍" class="headerlink" title="proot-distro介绍"></a>proot-distro介绍</h1><p><code>proot-distro是Termux中的一个命令，用于在移动设备上模拟和安装Linux发行版。</code><br>proot-distro没有图形用户界面，只是单纯的脚本命令，相对适合比较有经验的Termux用户。在Termux中，proot-distro可以安装多种发行版Linux，还可以备份还原Linux。</p>
+<h1 id="termux安装Debian的作用"><a href="#termux安装Debian的作用" class="headerlink" title="termux安装Debian的作用"></a>termux安装Debian的作用</h1><p>Termux安装Debian可以在移动设备上打造一个强大的Linux环境，使得用户可以在手机上进行<code>编程</code>、<code>服务器管理</code>、<code>网络安全测试</code>等。</p>
+<h1 id="装备工具"><a href="#装备工具" class="headerlink" title="装备工具"></a>装备工具</h1><p><a target="_blank" rel="noopener" href="https://termux.dev/cn/">termux</a></p>
+<h1 id="换源准备"><a href="#换源准备" class="headerlink" title="换源准备"></a>换源准备</h1><p>termux在安装Debian或其他依赖包时，可能会遇到卡顿，慢或下载失败，所以建议换国内源，换源看这期:<a href="/2023/06/04/termux%E6%8D%A2%E6%BA%90/">《termux换源》</a></p>
+<h1 id="开始教程"><a href="#开始教程" class="headerlink" title="开始教程"></a>开始教程</h1><p>1.打开termux<br>2.输入命令安装<code>proot-distro</code></p>
+<pre><code class="bash">pkg install proot-distro -y
 </code></pre>
-<p>然后回车<br>3.回车后会出现 “是否已安装dialog和fortune软件包？(y&#x2F;n)” ，直接输入”n”回车，会下载两个软件包，下载中可能会停止，回车即可<br>4.下载完成后，会出现一个图形界面的”选择菜单”<br><img src="/images/20230816/1.png" alt="1"><br>我们需要termux下方的↑→↓←的键盘进行操作<br><img src="/images/20230816/2.png" alt="2"><br>通过↓选中”下载ubuntu”然后回车<br>5.可能还会弹出提示与”按回车键继续”，回车即可<br>6.此时会下载一些软件包等文件，我们只需要静静等待即可。<br>7.部分地方可能会下载很慢，那需要翻墙，比如这里<br><img src="/images/20230816/3.png" alt="3"><br>8.如果出现了”root@localhost:~#”，说明ubuntu安装成功了<br><img src="/images/20230816/4.png" alt="4"><br>初始的ubuntu没有多少程序软件包，通过</p>
-<pre><code>apt install &lt;name&gt;
+<p>3.输入以下命令用于查看可安装的linux</p>
+<pre><code class="bash">proot-distro list
 </code></pre>
-<p>进行安装<br>9.安装完成后，如果要在termux启动ubuntu，可以在脚本中打开，也可以用命令 </p>
-<pre><code>proot-distro login ubuntu 
+<p><img src="/images/20230909/2.png" alt="2"><br>在这里的<code>Installed</code>为<code>no</code>说明Debian还未安装<br>4.使用以下命令在termux安装Debian</p>
+<pre><code class="bash">proot-distro install debian
 </code></pre>
-<p>来代替此脚本进入Ubuntu</p>
-<h1 id="删除Ubuntu"><a href="#删除Ubuntu" class="headerlink" title="删除Ubuntu"></a>删除Ubuntu</h1><p>使用命令在Ubuntu外删除</p>
-<pre><code class="bash">proot-distro remove ubuntu
+<p>此时需要漫长的等待，容易卡住，建议翻墙<br>5.显示以下画面就安装成功了<br><img src="/images/20230909/3.png" alt="3"><br>6.再次使用命令</p>
+<pre><code class="bash">proot-distro list
+</code></pre>
+<p>查看是否成功安装debian<br>7.<code>Installed</code>为<code>yes</code>说明Debian已安装<br><img src="/images/20230909/4.png" alt="4"><br>8.之后再使用命令启动debian</p>
+<pre><code class="bash">proot-distro login debian
+</code></pre>
+<p>9.最后显示<code>root@localhost:~#</code>就启动成功</p>
+<h1 id="删除debian"><a href="#删除debian" class="headerlink" title="删除debian"></a>删除debian</h1><p>使用以下命令在<code>debian</code>外删除</p>
+<pre><code class="bash">proot-distro remove debian
 </code></pre>
 <h1 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h1><p>今天的文章就分享在这里，下期见</p>
 
